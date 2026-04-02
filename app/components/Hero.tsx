@@ -41,7 +41,7 @@ export default function Hero() {
         />
 
         <h1
-          className="mb-2 text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl"
+          className="mb-2 text-[2rem] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           SKUDENESHAVNLØPET 2026
