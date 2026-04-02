@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-ocean-dark py-16 text-white">
@@ -54,9 +56,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-center text-xs text-white/40">
+        <div className="mt-8 flex flex-col items-center gap-3 text-center text-xs text-white/40">
           <p>Overskuddet går uavkortet til SUIL og lokalidretten.</p>
-          <p className="mt-1">Tidtaking: EQ Timing · Resultater: sportsidioten.no</p>
+          <a
+            href="https://live.eqtiming.com/80315"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block opacity-50 transition-opacity hover:opacity-80"
+          >
+            <Image
+              src="/images/samarbeidspartnere/EQ-Timing-logo.png"
+              alt="EQ Timing — påmelding og tidtaking"
+              width={80}
+              height={26}
+              className="h-5 w-auto brightness-0 invert"
+            />
+          </a>
         </div>
       </div>
     </footer>
