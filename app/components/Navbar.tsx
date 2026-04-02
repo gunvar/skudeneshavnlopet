@@ -16,9 +16,29 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+
+      // Scroll progress
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0);
+
+      // Active section detection
+      const sections = NAV_LINKS.map((l) => l.href.slice(1));
+      let current = "";
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -31,6 +51,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      {/* Scroll progress bar */}
+      <div
+        className="absolute top-0 left-0 h-[3px] bg-coral transition-[width] duration-100"
+        style={{ width: `${progress}%` }}
+      />
+
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a href="#" className="flex items-center gap-2">
           <Image
@@ -50,7 +76,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-coral ${
                 scrolled ? "text-ocean-dark" : "text-white"
-              }`}
+              } ${activeSection === link.href.slice(1) ? "!text-coral" : ""}`}
             >
               {link.label}
             </a>
@@ -92,7 +118,9 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base font-medium text-ocean-dark hover:text-coral"
+                className={`text-base font-medium hover:text-coral ${
+                  activeSection === link.href.slice(1) ? "text-coral" : "text-ocean-dark"
+                }`}
               >
                 {link.label}
               </a>

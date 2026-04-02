@@ -9,31 +9,63 @@ import Sponsors from "./components/Sponsors";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
 import FadeIn from "./components/FadeIn";
+import WaveDivider from "./components/WaveDivider";
+import MobileCTA from "./components/MobileCTA";
+import Prizes from "./components/Prizes";
+import Sommerbyen from "./components/Sommerbyen";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <MobileCTA />
       <main>
         <Hero />
+
         <FadeIn>
           <About />
         </FadeIn>
-        <FadeIn>
-          <Distances />
-        </FadeIn>
-        <FadeIn>
-          <CourseMap />
-        </FadeIn>
-        <FadeIn>
-          <PracticalInfo />
-        </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-sand" />
+
         <FadeIn>
           <Gallery />
         </FadeIn>
+
+        <WaveDivider from="fill-sand" to="fill-white" flip />
+
+        <Sommerbyen />
+
+        <FadeIn>
+          <Distances />
+        </FadeIn>
+
+        <WaveDivider from="fill-sand" to="fill-white" flip />
+
+        <FadeIn>
+          <CourseMap />
+        </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-sand" />
+
+        <FadeIn>
+          <Prizes />
+        </FadeIn>
+
+        <WaveDivider from="fill-sand" to="fill-white" flip />
+
+        <FadeIn>
+          <PracticalInfo />
+        </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-white" />
+
         <FadeIn>
           <Sponsors />
         </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-sand" />
+
         <FadeIn>
           <Results />
         </FadeIn>

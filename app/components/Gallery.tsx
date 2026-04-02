@@ -7,22 +7,50 @@ const images = [
   {
     src: "/images/galleri/havnen.jpg",
     alt: "Løpere passerer Bade-Olena på bryggen i Skudeneshavn",
+    span: "col-span-2 row-span-2",
+    aspect: "aspect-[4/3]",
   },
   {
-    src: "/images/galleri/medaljer.jpg",
+    src: "/images/galleri/2025-07.jpg",
+    alt: "Vinner krysser mållinjen med konfetti",
+    span: "",
+    aspect: "aspect-[3/4]",
+  },
+  {
+    src: "/images/galleri/2025-03.jpg",
     alt: "Medaljer klare til utdeling ved Bade-Olena",
+    span: "",
+    aspect: "aspect-square",
+  },
+  {
+    src: "/images/galleri/2025-08.jpg",
+    alt: "Barn og voksne klare ved startlinjen — Havnasprinten",
+    span: "",
+    aspect: "aspect-square",
+  },
+  {
+    src: "/images/galleri/2025-10.jpg",
+    alt: "Løpere i full fart gjennom gatene i Gamle Skudeneshavn",
+    span: "col-span-2",
+    aspect: "aspect-[2/1]",
+  },
+  {
+    src: "/images/galleri/2025-09.jpg",
+    alt: "Liten deltaker får medalje — folkefest for alle aldre",
+    span: "",
+    aspect: "aspect-[3/4]",
   },
   {
     src: "/images/galleri/premiering.jpg",
     alt: "Premieutdeling på Bade-Olena etter løpet",
-  },
-  {
-    src: "/images/galleri/medalje-close.jpg",
-    alt: "Nærbilde av Skudeneshavnløpet-medaljen",
+    span: "",
+    aspect: "aspect-square",
   },
   {
     src: "/images/galleri/loper-mal.jpg",
     alt: "Løper krysser mållinjen i Skudeneshavn sentrum",
+    span: "",
+    aspect: "aspect-square",
   },
 ];
 
@@ -42,23 +70,21 @@ export default function Gallery() {
           Glimt fra Skudeneshavnløpet 2025 — folkefest mellom hvitmalte trehus
         </p>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
+        {/* Masonry-inspired grid */}
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:gap-4">
           {images.map((img, i) => (
             <button
               key={img.src}
               onClick={() => setLightboxIndex(i)}
-              className={`group relative overflow-hidden rounded-xl ${
-                i === 0 ? "col-span-2 row-span-2" : ""
-              }`}
+              className={`group relative overflow-hidden rounded-xl ${img.span}`}
             >
-              <div className={`relative w-full ${i === 0 ? "aspect-[4/3]" : "aspect-square"}`}>
+              <div className={`relative w-full ${img.aspect}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes={i === 0 ? "(max-width: 640px) 100vw, 66vw" : "(max-width: 640px) 50vw, 33vw"}
+                  sizes={img.span.includes("col-span-2") ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 50vw, 25vw"}
                 />
               </div>
               <div className="absolute inset-0 bg-ocean-dark/0 transition-colors duration-300 group-hover:bg-ocean-dark/20" />
@@ -73,7 +99,6 @@ export default function Gallery() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
           onClick={() => setLightboxIndex(null)}
         >
-          {/* Close button */}
           <button
             onClick={() => setLightboxIndex(null)}
             className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30"
@@ -84,7 +109,6 @@ export default function Gallery() {
             </svg>
           </button>
 
-          {/* Prev */}
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -98,7 +122,6 @@ export default function Gallery() {
             </svg>
           </button>
 
-          {/* Image */}
           <div
             className="relative max-h-[85vh] max-w-[90vw]"
             onClick={(e) => e.stopPropagation()}
@@ -115,7 +138,6 @@ export default function Gallery() {
             </p>
           </div>
 
-          {/* Next */}
           <button
             onClick={(e) => {
               e.stopPropagation();
