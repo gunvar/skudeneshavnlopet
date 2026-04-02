@@ -1,7 +1,7 @@
 const results = [
-  { year: "2025", url: "https://www.sportsidioten.no/resultater/skudeneshavnlopet-2025/", participants: "198 deltakere" },
-  { year: "2024", url: "https://www.sportsidioten.no/resultater/skudeneshavnlopet-2024/", participants: "Andre arrangement" },
-  { year: "2023", url: "https://www.sportsidioten.no/resultater/resultater-skudeneshavnlopet-2023/", participants: "Første arrangement" },
+  { year: "2025", url: "https://live.eqtiming.com/77221#result", participants: "198 deltakere" },
+  { year: "2024", url: "https://live.eqtiming.com/70856#result", participants: "Andre arrangement" },
+  { year: "2023", url: "https://live.eqtiming.com/65870#result", participants: "Første arrangement" },
 ];
 
 export default function Results() {

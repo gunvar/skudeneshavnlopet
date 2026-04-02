@@ -99,14 +99,11 @@ export default function Distances() {
               🏆
             </div>
             <div className="flex-1">
-              <p className="mb-1 text-xs font-bold uppercase tracking-widest text-white/70">
-                NYTT 2026!
-              </p>
               <h3
                 className="mb-2 text-xl font-extrabold sm:text-2xl"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Lagkonkurranse med vandrepokal
+                Lagkonkurranse — Vandrepokal p&aring; 5 km
               </h3>
               <p className="text-sm text-white/85">
                 Stil lag på 5 km! Minimum 3 deltakere per lag — de 3 beste

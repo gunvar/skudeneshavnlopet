@@ -16,14 +16,22 @@ export default function CourseMap() {
         </p>
 
         {/* Main course map */}
-        <div className="overflow-hidden rounded-2xl bg-sand shadow-lg">
+        <a
+          href="https://www.strava.com/segments/34618587"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block overflow-hidden rounded-2xl bg-sand shadow-lg transition-shadow hover:shadow-xl"
+        >
           <div className="relative aspect-video w-full">
             <Image
               src="/images/loypekart/10km.png"
-              alt="Løypekart 10 km — viser ruten gjennom Skudeneshavn med høydeprofil"
+              alt="Løypekart 10 km — klikk for å se løypen på Strava"
               fill
               className="object-contain bg-gray-900"
             />
+            <div className="absolute bottom-3 right-3 rounded-full bg-ocean/80 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+              Se løypen på Strava &rarr;
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-4 p-6 sm:grid-cols-3">
             <div className="text-center">
@@ -51,7 +59,7 @@ export default function CourseMap() {
               </p>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Smaller maps row */}
         <div className="mt-6 grid gap-4 sm:grid-cols-2">

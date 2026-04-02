@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "#praktisk", label: "Praktisk" },
   { href: "#galleri", label: "Galleri" },
   { href: "#sponsorer", label: "Sponsorer" },
+  { href: "#resultater", label: "Resultater" },
 ];
 
 export default function Navbar() {

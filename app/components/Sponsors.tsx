@@ -1,9 +1,93 @@
-const sponsors = [
-  { name: "Skudenes & Aakra Sparebank", tier: "hovedsponsor" },
-  { name: "Brødr. Olsen", tier: "sponsor" },
-  { name: "Solstad Offshore", tier: "sponsor" },
-  { name: "Skudenes UIL", tier: "arrangør" },
+import Image from "next/image";
+
+const hovedsponsorer = [
+  {
+    name: "Skudenes & Aakra Sparebank",
+    logo: "/images/sponsorer/sponsorer_0014_Layer-1-1.webp",
+    url: "https://www.skudenesaakra.no/",
+  },
+  {
+    name: "Solstad Offshore",
+    logo: "/images/sponsorer/solstad-offshore.png",
+    url: "https://www.solstad.com/",
+  },
 ];
+
+const sponsorer = [
+  {
+    name: "Brødr. Olsen",
+    logo: "/images/sponsorer/brodr-olsen.png",
+    url: "https://www.br-olsen.no/",
+  },
+  {
+    name: "VB - Kristoffer Sirevåg",
+    logo: "/images/sponsorer/VB_Kristoffer_Sirevåg.jpg",
+    url: null,
+  },
+  {
+    name: "Capricorn Equipment AS",
+    logo: "/images/sponsorer/capricorn-equipment.png",
+    url: "https://capricornequipment.no/",
+  },
+  {
+    name: "Blåklokken Blomsterforretning",
+    logo: "/images/sponsorer/blaklokken-interflora.svg",
+    url: "https://www.interflora.no/om-oss/finn-butikk/bl%C3%A5klokken-blomsterforretning",
+    displayName: "Blåklokken Blomsterforretning",
+  },
+  {
+    name: "Rema 1000",
+    logo: "/images/sponsorer/rema-1000-logo-png_seeklogo-117380.png",
+    url: "https://www.rema.no/",
+  },
+];
+
+const arrangor = {
+  name: "Skudenes UIL",
+  logo: "/images/sponsorer/suil.webp",
+  url: null,
+};
+
+function SponsorCard({
+  sponsor,
+  size = "normal",
+}: {
+  sponsor: { name: string; logo: string; url: string | null; displayName?: string };
+  size?: "large" | "normal";
+}) {
+  const imgHeight = size === "large" ? "h-20 sm:h-24" : "h-12 sm:h-16";
+  const padding = size === "large" ? "p-8" : "p-5";
+
+  const content = (
+    <div
+      className={`flex flex-col items-center justify-center rounded-xl border border-gray-100 bg-white ${padding} text-center transition-all hover:shadow-md ${sponsor.url ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
+    >
+      <div className={`relative ${imgHeight} w-full`}>
+        <Image
+          src={sponsor.logo}
+          alt={sponsor.name}
+          fill
+          className="object-contain"
+        />
+      </div>
+      {sponsor.displayName && (
+        <p className="mt-3 text-xs font-semibold text-ocean-dark">
+          {sponsor.displayName}
+        </p>
+      )}
+    </div>
+  );
+
+  if (sponsor.url) {
+    return (
+      <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+}
 
 export default function Sponsors() {
   return (
@@ -13,34 +97,38 @@ export default function Sponsors() {
           className="mb-4 text-center text-3xl font-extrabold text-ocean-dark sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Våre sponsorer
+          Sponsorer
         </h2>
         <p className="mx-auto mb-10 max-w-lg text-center text-gray-600">
           Takk til våre sponsorer som gjør Skudeneshavnløpet mulig!
         </p>
 
-        {/* Sponsor grid */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {sponsors.map((s) => (
-            <div
-              key={s.name}
-              className="flex flex-col items-center justify-center rounded-xl border border-gray-100 bg-sand/50 p-6 text-center transition-shadow hover:shadow-md"
-            >
-              <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-ocean/10">
-                <svg
-                  className="h-8 w-8 text-ocean"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                >
-                  <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <p className="text-sm font-semibold text-ocean-dark">{s.name}</p>
-              <p className="mt-0.5 text-xs capitalize text-gray-400">{s.tier}</p>
-            </div>
+        {/* Hovedsponsorer */}
+        <p className="mb-4 text-center text-xs font-bold uppercase tracking-widest text-ocean">
+          Hovedsponsorer
+        </p>
+        <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {hovedsponsorer.map((s) => (
+            <SponsorCard key={s.name} sponsor={s} size="large" />
           ))}
+        </div>
+
+        {/* Sponsorer */}
+        <p className="mb-4 text-center text-xs font-bold uppercase tracking-widest text-gray-400">
+          Sponsorer
+        </p>
+        <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {sponsorer.map((s) => (
+            <SponsorCard key={s.name} sponsor={s} />
+          ))}
+        </div>
+
+        {/* Arrangør */}
+        <p className="mb-4 text-center text-xs font-bold uppercase tracking-widest text-gray-400">
+          Arrangør
+        </p>
+        <div className="mx-auto max-w-[200px]">
+          <SponsorCard sponsor={arrangor} />
         </div>
 
         {/* Bli sponsor CTA */}

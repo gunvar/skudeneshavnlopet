@@ -3,7 +3,7 @@ export default function About() {
     { number: "3", label: "distanser", desc: "500m · 5km · 10km" },
     { number: "198", label: "deltakere i 2025", desc: "Voksende folkefest!" },
     { number: "4.", label: "gang i 2026", desc: "Arrangert siden 2023" },
-    { number: "NYTT", label: "Lagkonkurranse", desc: "Vandrepokal på 5km" },
+    { number: "🏆", label: "Lagkonkurranse", desc: "Vandrepokal på 5km" },
   ];
 
   return (
