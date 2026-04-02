@@ -14,6 +14,7 @@ import MobileCTA from "./components/MobileCTA";
 import Prizes from "./components/Prizes";
 import Sommerbyen from "./components/Sommerbyen";
 import ImageBreak from "./components/ImageBreak";
+import RaceDayBanner from "./components/RaceDayBanner";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <MobileCTA />
       <main>
         <Hero />
+        <RaceDayBanner />
 
         <FadeIn>
           <About />
