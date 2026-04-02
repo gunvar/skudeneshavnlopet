@@ -1,4 +1,4 @@
-const REGISTRATION_URL = "https://live.eqtiming.com/80315";
+const REGISTRATION_URL = "https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet";
 
 const distances = [
   {

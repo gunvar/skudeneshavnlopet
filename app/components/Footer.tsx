@@ -16,7 +16,7 @@ export default function Footer() {
             Lørdag 13. juni 2026 — Skudeneshavn
           </p>
           <a
-            href="https://live.eqtiming.com/80315"
+            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark"

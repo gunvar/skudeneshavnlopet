@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
 
         <a
-          href="https://live.eqtiming.com/80315"
+          href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark sm:px-10 sm:text-xl"

@@ -26,7 +26,7 @@ export default function MobileCTA() {
             <p className="text-[10px] text-gray-500">Lørdag 13. juni</p>
           </div>
           <a
-            href="https://live.eqtiming.com/80315"
+            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all active:scale-95"

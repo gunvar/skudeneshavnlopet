@@ -82,7 +82,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://live.eqtiming.com/80315"
+            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-coral-dark hover:shadow-xl"
@@ -126,7 +126,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://live.eqtiming.com/80315"
+              href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 rounded-full bg-coral px-6 py-3 text-base font-bold text-white shadow-lg"

@@ -67,7 +67,7 @@ export default function RootLayout({
                   name: "5 km / 10 km",
                   price: "350",
                   priceCurrency: "NOK",
-                  url: "https://live.eqtiming.com/80315",
+                  url: "https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet",
                 },
                 {
                   "@type": "Offer",
