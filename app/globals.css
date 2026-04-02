@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean: #1a5276;
+  --color-ocean-light: #2980b9;
+  --color-ocean-dark: #0e2f44;
+  --color-coral: #e8603c;
+  --color-coral-dark: #c0472a;
+  --color-sand: #f5f0e8;
+  --color-sand-dark: #e8dfd2;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}

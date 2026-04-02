@@ -1,0 +1,112 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
+const NAV_LINKS = [
+  { href: "#om", label: "Om løpet" },
+  { href: "#distanser", label: "Distanser" },
+  { href: "#loypekart", label: "Løypekart" },
+  { href: "#praktisk", label: "Praktisk" },
+  { href: "#galleri", label: "Galleri" },
+  { href: "#sponsorer", label: "Sponsorer" },
+];
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-sm shadow-md"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#" className="flex items-center gap-2">
+          <Image
+            src="/images/logo.png"
+            alt="Skudeneshavnløpet"
+            width={140}
+            height={50}
+            className={`h-10 w-auto transition-opacity ${scrolled ? "opacity-100" : "opacity-0 md:opacity-100"}`}
+          />
+        </a>
+
+        {/* Desktop nav */}
+        <div className="hidden items-center gap-6 md:flex">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`text-sm font-medium transition-colors hover:text-coral ${
+                scrolled ? "text-ocean-dark" : "text-white"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="https://live.eqtiming.com/80315"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-coral-dark hover:shadow-xl"
+          >
+            Meld deg på!
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex flex-col gap-1.5 md:hidden"
+          aria-label="Meny"
+        >
+          <span
+            className={`block h-0.5 w-6 transition-all ${scrolled ? "bg-ocean-dark" : "bg-white"} ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 transition-all ${scrolled ? "bg-ocean-dark" : "bg-white"} ${menuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block h-0.5 w-6 transition-all ${scrolled ? "bg-ocean-dark" : "bg-white"} ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+          />
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="bg-white/95 backdrop-blur-sm shadow-lg md:hidden">
+          <div className="flex flex-col items-center gap-4 py-6">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-base font-medium text-ocean-dark hover:text-coral"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="https://live.eqtiming.com/80315"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 rounded-full bg-coral px-6 py-3 text-base font-bold text-white shadow-lg"
+            >
+              Meld deg på!
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
