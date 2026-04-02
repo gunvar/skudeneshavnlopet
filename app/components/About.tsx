@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   const highlights = [
     { number: "3", label: "distanser", desc: "500m · 5km · 10km" },
@@ -47,11 +49,23 @@ export default function About() {
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-2 text-sm text-gray-400">
-          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>Profesjonell tidtaking ved <strong className="text-ocean">EQ Timing</strong> — medalje til alle som fullfører</span>
+        <div className="mt-10 flex items-center justify-center gap-3 text-sm text-gray-400">
+          <span>Profesjonell tidtaking ved</span>
+          <a
+            href="https://live.eqtiming.com/80315"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-opacity hover:opacity-80"
+          >
+            <Image
+              src="/images/samarbeidspartnere/EQ-Timing-logo.png"
+              alt="EQ Timing — klikk for påmelding"
+              width={100}
+              height={32}
+              className="h-7 w-auto"
+            />
+          </a>
+          <span>— medalje til alle som fullfører</span>
         </div>
       </div>
     </section>
