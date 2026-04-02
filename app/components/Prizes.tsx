@@ -28,7 +28,7 @@ export default function Prizes() {
               src="/images/galleri/medalje-close.jpg"
               alt="Skudeneshavnløpet-medaljen"
               fill
-              className="rounded-full object-cover shadow-xl ring-4 ring-white"
+              className="rounded-full object-cover object-[center_30%] shadow-xl ring-4 ring-white"
             />
           </div>
         </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const REGISTRATION_URL = "https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet";
 
 const distances = [
@@ -95,8 +97,13 @@ export default function Distances() {
         {/* Lagkonkurranse highlight */}
         <div className="mt-8 overflow-hidden rounded-2xl bg-gradient-to-r from-ocean to-ocean-light p-6 text-white shadow-lg sm:p-8">
           <div className="flex flex-col items-center text-center sm:flex-row sm:text-left">
-            <div className="mb-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/20 text-3xl sm:mb-0 sm:mr-6">
-              🏆
+            <div className="relative mb-4 h-20 w-16 shrink-0 sm:mb-0 sm:mr-6">
+              <Image
+                src="/images/vandrepokal.jpg"
+                alt="Vandrepokalen for lagkonkurransen"
+                fill
+                className="object-contain drop-shadow-lg"
+              />
             </div>
             <div className="flex-1">
               <h3
