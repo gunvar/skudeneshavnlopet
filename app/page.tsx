@@ -13,6 +13,7 @@ import WaveDivider from "./components/WaveDivider";
 import MobileCTA from "./components/MobileCTA";
 import Prizes from "./components/Prizes";
 import Sommerbyen from "./components/Sommerbyen";
+import ImageBreak from "./components/ImageBreak";
 
 export default function Home() {
   return (
@@ -45,6 +46,12 @@ export default function Home() {
         <FadeIn>
           <CourseMap />
         </FadeIn>
+
+        <ImageBreak
+          src="/images/sommerbyen-2.jpg"
+          alt="Hvitmalte trehus og sjarmerende gater i Gamle Skudeneshavn"
+          quote="Løp gjennom Norges best bevarte trehusby"
+        />
 
         <WaveDivider from="fill-white" to="fill-sand" />
 

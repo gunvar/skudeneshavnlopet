@@ -1,17 +1,33 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Countdown from "./Countdown";
 
 export default function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/images/hero-bg-new.jpg"
-        alt="Startfeltet ved Skudeneshavnløpet — løpere klare ved CRAFT-portalen i Gamle Skudeneshavn"
-        fill
-        className="object-cover"
-        priority
-      />
+      {/* Background image with parallax */}
+      <div
+        className="absolute inset-0"
+        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+      >
+        <Image
+          src="/images/hero-bg-new.jpg"
+          alt="Startfeltet ved Skudeneshavnløpet — løpere klare ved CRAFT-portalen i Gamle Skudeneshavn"
+          fill
+          className="object-cover scale-110"
+          priority
+        />
+      </div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-ocean-dark/70 via-ocean/50 to-ocean-dark/80" />
 
@@ -47,20 +63,32 @@ export default function Hero() {
           href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark sm:px-10 sm:text-xl"
+          className="group relative rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark sm:px-10 sm:text-xl"
         >
           Meld deg på!
         </a>
 
         {/* Social proof */}
-        <p className="mt-4 text-sm text-white/60">
-          198 fullførte i 2025 — bli med i 2026!
-        </p>
+        <div className="mt-6 flex flex-col items-center gap-2">
+          <div className="flex items-center gap-3 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
+            <div className="flex -space-x-2">
+              <div className="h-6 w-6 rounded-full bg-coral/80 ring-2 ring-white/20" />
+              <div className="h-6 w-6 rounded-full bg-ocean-light/80 ring-2 ring-white/20" />
+              <div className="h-6 w-6 rounded-full bg-coral/60 ring-2 ring-white/20" />
+            </div>
+            <span className="text-sm font-medium text-white/80">
+              198 deltakere i 2025
+            </span>
+          </div>
+          <p className="text-xs text-white/50">
+            500m &middot; 5km &middot; 10km — for alle aldre
+          </p>
+        </div>
 
         {/* Scroll indicator */}
-        <div className="mt-12 animate-bounce">
+        <div className="mt-10 animate-bounce">
           <svg
-            className="h-8 w-8 text-white/50"
+            className="h-8 w-8 text-white/40"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
