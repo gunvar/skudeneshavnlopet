@@ -52,7 +52,12 @@ export default function Distances() {
               key={d.name}
               className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-xl"
             >
-              <div className={`${d.color} px-6 py-5 text-white`}>
+              <div className={`${d.color} relative px-6 py-5 text-white`}>
+                {d.cta && (
+                  <span className="absolute top-3 right-3 rounded-full bg-white/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm">
+                    Maks 300
+                  </span>
+                )}
                 <h3
                   className="text-2xl font-extrabold"
                   style={{ fontFamily: "var(--font-heading)" }}

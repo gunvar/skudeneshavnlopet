@@ -21,9 +21,9 @@ export default function MobileCTA() {
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="text-xs font-semibold text-ocean-dark truncate">
-              Skudeneshavnløpet 2026
+              Kun 300 plasser!
             </p>
-            <p className="text-[10px] text-gray-500">Lørdag 13. juni</p>
+            <p className="text-[10px] text-coral font-medium">Sikre deg plass — 13. juni</p>
           </div>
           <a
             href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"

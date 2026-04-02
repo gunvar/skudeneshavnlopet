@@ -77,11 +77,11 @@ export default function Hero() {
               <div className="h-6 w-6 rounded-full bg-coral/60 ring-2 ring-white/20" />
             </div>
             <span className="text-sm font-medium text-white/80">
-              198 deltakere i 2025
+              Kun 300 plasser — 198 fullførte i 2025
             </span>
           </div>
           <p className="text-xs text-white/50">
-            500m &middot; 5km &middot; 10km — for alle aldre
+            500m &middot; 5km &middot; 10km — sikre deg plass!
           </p>
         </div>
 
