@@ -15,29 +15,34 @@ const hovedsponsorer = [
 
 const sponsorer = [
   {
-    name: "Brødr. Olsen",
-    logo: "/images/sponsorer/brodr-olsen.png",
+    name: "Brødr. Olsen Mur & Bygg",
+    logo: null,
+    textLogo: true,
     url: "https://www.br-olsen.no/",
   },
   {
     name: "VB - Kristoffer Sirevåg",
     logo: "/images/sponsorer/VB_Kristoffer_Sirevåg.jpg",
+    textLogo: false,
     url: null,
   },
   {
     name: "Capricorn Equipment AS",
     logo: "/images/sponsorer/capricorn-equipment.png",
+    textLogo: false,
     url: "https://capricornequipment.no/",
   },
   {
     name: "Blåklokken Blomsterforretning",
     logo: "/images/sponsorer/blaklokken-interflora.svg",
+    textLogo: false,
     url: "https://www.interflora.no/om-oss/finn-butikk/bl%C3%A5klokken-blomsterforretning",
     displayName: "Blåklokken Blomsterforretning",
   },
   {
     name: "Rema 1000",
     logo: "/images/sponsorer/rema-1000-logo-png_seeklogo-117380.png",
+    textLogo: false,
     url: "https://www.rema.no/",
   },
 ];
@@ -52,24 +57,38 @@ function SponsorCard({
   sponsor,
   size = "normal",
 }: {
-  sponsor: { name: string; logo: string; url: string | null; displayName?: string };
+  sponsor: { name: string; logo: string | null; url: string | null; displayName?: string; textLogo?: boolean };
   size?: "large" | "normal";
 }) {
-  const imgHeight = size === "large" ? "h-20 sm:h-24" : "h-12 sm:h-16";
+  const imgHeight = size === "large" ? "h-20 sm:h-24" : "h-14 sm:h-16";
   const padding = size === "large" ? "p-8" : "p-5";
 
   const content = (
     <div
       className={`flex flex-col items-center justify-center rounded-xl border border-gray-100 bg-white ${padding} text-center transition-all hover:shadow-md ${sponsor.url ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
     >
-      <div className={`relative ${imgHeight} w-full`}>
-        <Image
-          src={sponsor.logo}
-          alt={sponsor.name}
-          fill
-          className="object-contain"
-        />
-      </div>
+      {sponsor.textLogo ? (
+        <div className={`flex ${imgHeight} items-center justify-center`}>
+          <p
+            className="text-base font-extrabold leading-tight text-ocean-dark sm:text-lg"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Brødr. Olsen
+            <span className="block text-[10px] font-semibold uppercase tracking-widest text-gray-400">
+              Mur &amp; Bygg
+            </span>
+          </p>
+        </div>
+      ) : sponsor.logo ? (
+        <div className={`relative ${imgHeight} w-full`}>
+          <Image
+            src={sponsor.logo}
+            alt={sponsor.name}
+            fill
+            className="object-contain"
+          />
+        </div>
+      ) : null}
       {sponsor.displayName && (
         <p className="mt-3 text-xs font-semibold text-ocean-dark">
           {sponsor.displayName}
