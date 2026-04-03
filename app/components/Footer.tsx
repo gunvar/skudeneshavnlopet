@@ -29,9 +29,8 @@ export default function Footer() {
 
         <div className="grid gap-8 text-center text-sm text-white/60 sm:grid-cols-3 sm:text-left">
           <div>
-            <p className="mb-2 font-semibold text-white/80">Arrangører</p>
+            <p className="mb-2 font-semibold text-white/80">Arrangør</p>
             <p>Skudenes UIL (SUIL)</p>
-            <p>Skudeneshavn Næringsforening</p>
           </div>
           <div>
             <p className="mb-2 font-semibold text-white/80">Kontakt</p>
@@ -72,6 +71,10 @@ export default function Footer() {
               className="h-5 w-auto brightness-0 invert"
             />
           </a>
+        </div>
+
+        <div className="mt-6 border-t border-white/5 pt-4 text-center text-[11px] text-white/25">
+          Nettside av Gunvar Mj&oslash;lhus
         </div>
       </div>
     </footer>

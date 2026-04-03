@@ -49,8 +49,10 @@ export default function About() {
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-3 text-sm text-gray-400">
-          <span>Profesjonell tidtaking ved</span>
+        <div className="mt-10 flex flex-col items-center gap-3 text-sm text-gray-400">
+          <p>
+            Profesjonell tidtaking ved <strong className="text-ocean">EQ Timing</strong> — medalje til alle som fullfører
+          </p>
           <a
             href="https://live.eqtiming.com/80315"
             target="_blank"
@@ -60,12 +62,11 @@ export default function About() {
             <Image
               src="/images/samarbeidspartnere/EQ-Timing-logo.png"
               alt="EQ Timing — klikk for påmelding"
-              width={100}
-              height={32}
-              className="h-7 w-auto"
+              width={120}
+              height={40}
+              className="h-9 w-auto"
             />
           </a>
-          <span>— medalje til alle som fullfører</span>
         </div>
       </div>
     </section>
