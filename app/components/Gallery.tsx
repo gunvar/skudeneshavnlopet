@@ -46,12 +46,6 @@ const images = [
     span: "",
     aspect: "aspect-square",
   },
-  {
-    src: "/images/galleri/loper-mal.jpg",
-    alt: "Løper krysser mållinjen i Skudeneshavn sentrum",
-    span: "",
-    aspect: "aspect-square",
-  },
 ];
 
 export default function Gallery() {
