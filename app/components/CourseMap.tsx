@@ -136,6 +136,7 @@ function InteractiveMap({
   const [hoverDist, setHoverDist] = useState<number | null>(null);
   const [openStopId, setOpenStopId] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const lastDrawnNRef = useRef(-1);
 
   const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
   const allStops = useMemo(
@@ -229,30 +230,22 @@ function InteractiveMap({
     };
   }, [token, course.bounds]);
 
-  // Load full route once — we animate via line-trim-offset, not by re-slicing
   useEffect(() => {
     if (!mapReady) return;
     const map = mapRef.current;
     if (!map) return;
     const src = map.getSource("route") as mapboxgl.GeoJSONSource | undefined;
     if (!src) return;
+    const n = Math.max(1, Math.ceil(progress * course.coordinates.length));
+    if (n === lastDrawnNRef.current) return;
+    lastDrawnNRef.current = n;
+    const slice = course.coordinates.slice(0, n);
     src.setData({
       type: "Feature",
       properties: {},
-      geometry: { type: "LineString", coordinates: course.coordinates },
+      geometry: { type: "LineString", coordinates: slice },
     });
-  }, [course.coordinates, mapReady]);
-
-  // Animate drawing via line-trim-offset (hides [progress, 1] portion)
-  useEffect(() => {
-    if (!mapReady) return;
-    const map = mapRef.current;
-    if (!map) return;
-    if (!map.getLayer("route")) return;
-    const trim = [progress, 1] as [number, number];
-    map.setPaintProperty("route", "line-trim-offset", trim);
-    map.setPaintProperty("route-casing", "line-trim-offset", trim);
-  }, [progress, mapReady]);
+  }, [progress, course.coordinates, mapReady]);
 
   // Create stop markers once when course changes, then just toggle visibility via opacity
   useEffect(() => {
@@ -407,6 +400,27 @@ function InteractiveMap({
 
   return (
     <div ref={sectionRef} className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-200">
+      <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-white px-4 py-3 sm:px-5">
+        <p className="text-xs font-medium text-gray-500 sm:text-sm">
+          Følg løypen underveis — segment på Strava
+        </p>
+        <a
+          href="https://www.strava.com/segments/34618587"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#fc4c02] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white shadow-md transition hover:bg-[#e84400] hover:shadow-lg sm:text-sm"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="h-4 w-4"
+            aria-hidden="true"
+          >
+            <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+          </svg>
+          Finn løypen på Strava
+        </a>
+      </div>
       <div className="relative">
         <div ref={containerRef} className="aspect-[4/3] w-full sm:aspect-video" />
 
