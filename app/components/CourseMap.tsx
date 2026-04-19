@@ -136,6 +136,7 @@ function InteractiveMap({
   const [hoverDist, setHoverDist] = useState<number | null>(null);
   const [openStopId, setOpenStopId] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
+  const lastDrawnNRef = useRef(-1);
 
   const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
   const allStops = useMemo(
@@ -236,6 +237,8 @@ function InteractiveMap({
     const src = map.getSource("route") as mapboxgl.GeoJSONSource | undefined;
     if (!src) return;
     const n = Math.max(1, Math.ceil(progress * course.coordinates.length));
+    if (n === lastDrawnNRef.current) return;
+    lastDrawnNRef.current = n;
     const slice = course.coordinates.slice(0, n);
     src.setData({
       type: "Feature",
@@ -401,9 +404,29 @@ function InteractiveMap({
         <div ref={containerRef} className="aspect-[4/3] w-full sm:aspect-video" />
 
         {openStop && (
-          <div className="absolute inset-x-3 bottom-3 z-10 sm:inset-x-auto sm:right-3 sm:max-w-sm">
+          <div className="absolute inset-x-3 bottom-3 z-10 sm:inset-x-auto sm:right-3 sm:top-3 sm:max-w-sm">
             <div className="overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/10">
-              <div className="relative aspect-[4/3] w-full bg-gray-100">
+              <div className="flex items-start justify-between gap-3 border-b border-gray-100 px-4 py-3">
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-widest text-coral">
+                    {(openStop.distanceMeters / 1000).toFixed(1)} km
+                  </p>
+                  <h3
+                    className="truncate text-base font-bold text-ocean-dark"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {openStop.name}
+                  </h3>
+                </div>
+                <button
+                  onClick={() => setOpenStopId(null)}
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gray-100 text-xl leading-none text-gray-700 hover:bg-gray-200"
+                  aria-label="Lukk"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="relative aspect-video w-full bg-gray-100 sm:aspect-[4/3]">
                 <Image
                   src={openStop.image}
                   alt={openStop.name}
@@ -411,25 +434,9 @@ function InteractiveMap({
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 384px"
                 />
-                <button
-                  onClick={() => setOpenStopId(null)}
-                  className="absolute right-2 top-2 grid h-8 w-8 place-items-center rounded-full bg-black/60 text-white hover:bg-black/80"
-                  aria-label="Lukk"
-                >
-                  ×
-                </button>
               </div>
               <div className="p-4">
-                <p className="text-xs font-bold uppercase tracking-widest text-coral">
-                  {(openStop.distanceMeters / 1000).toFixed(1)} km
-                </p>
-                <h3
-                  className="mt-1 text-lg font-bold text-ocean-dark"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  {openStop.name}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                <p className="text-sm leading-relaxed text-gray-600">
                   {openStop.description}
                 </p>
               </div>
