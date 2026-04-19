@@ -27,7 +27,8 @@ export const stops: Stop[] = [
   {
     id: "vikesjoen",
     name: "Vikesjøen",
-    description: "Speilblank innsjø med bjørk og furu langs stien.",
+    description:
+      "Løypen går langs sjøen med utsikt over sjøhus, Falnes kirke og fyrlykten ute ved Beiningen.",
     image: "/images/loypekart/stops/02_vikesjøen.png",
     distanceMeters: 1400,
     showIn: ["10km", "5km"],

@@ -136,7 +136,6 @@ function InteractiveMap({
   const [hoverDist, setHoverDist] = useState<number | null>(null);
   const [openStopId, setOpenStopId] = useState<string | null>(null);
   const [mapReady, setMapReady] = useState(false);
-  const lastDrawnNRef = useRef(-1);
 
   const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
   const allStops = useMemo(
@@ -230,22 +229,30 @@ function InteractiveMap({
     };
   }, [token, course.bounds]);
 
+  // Load full route once — we animate via line-trim-offset, not by re-slicing
   useEffect(() => {
     if (!mapReady) return;
     const map = mapRef.current;
     if (!map) return;
     const src = map.getSource("route") as mapboxgl.GeoJSONSource | undefined;
     if (!src) return;
-    const n = Math.max(1, Math.ceil(progress * course.coordinates.length));
-    if (n === lastDrawnNRef.current) return;
-    lastDrawnNRef.current = n;
-    const slice = course.coordinates.slice(0, n);
     src.setData({
       type: "Feature",
       properties: {},
-      geometry: { type: "LineString", coordinates: slice },
+      geometry: { type: "LineString", coordinates: course.coordinates },
     });
-  }, [progress, course.coordinates, mapReady]);
+  }, [course.coordinates, mapReady]);
+
+  // Animate drawing via line-trim-offset (hides [progress, 1] portion)
+  useEffect(() => {
+    if (!mapReady) return;
+    const map = mapRef.current;
+    if (!map) return;
+    if (!map.getLayer("route")) return;
+    const trim = [progress, 1] as [number, number];
+    map.setPaintProperty("route", "line-trim-offset", trim);
+    map.setPaintProperty("route-casing", "line-trim-offset", trim);
+  }, [progress, mapReady]);
 
   // Create stop markers once when course changes, then just toggle visibility via opacity
   useEffect(() => {
@@ -404,9 +411,9 @@ function InteractiveMap({
         <div ref={containerRef} className="aspect-[4/3] w-full sm:aspect-video" />
 
         {openStop && (
-          <div className="absolute inset-x-3 bottom-3 z-10 sm:inset-x-auto sm:right-3 sm:top-3 sm:max-w-sm">
-            <div className="overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/10">
-              <div className="flex items-start justify-between gap-3 border-b border-gray-100 px-4 py-3">
+          <div className="absolute inset-3 z-10 sm:inset-auto sm:right-3 sm:top-3 sm:max-h-[calc(100%-24px)] sm:max-w-sm">
+            <div className="flex h-full max-h-full flex-col overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/10">
+              <div className="flex shrink-0 items-start justify-between gap-3 border-b border-gray-100 bg-white px-4 py-3">
                 <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-widest text-coral">
                     {(openStop.distanceMeters / 1000).toFixed(1)} km
@@ -420,25 +427,27 @@ function InteractiveMap({
                 </div>
                 <button
                   onClick={() => setOpenStopId(null)}
-                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gray-100 text-xl leading-none text-gray-700 hover:bg-gray-200"
+                  className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gray-100 text-2xl leading-none text-gray-700 hover:bg-gray-200"
                   aria-label="Lukk"
                 >
                   ×
                 </button>
               </div>
-              <div className="relative aspect-video w-full bg-gray-100 sm:aspect-[4/3]">
-                <Image
-                  src={openStop.image}
-                  alt={openStop.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 384px"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-sm leading-relaxed text-gray-600">
-                  {openStop.description}
-                </p>
+              <div className="flex-1 overflow-y-auto">
+                <div className="relative aspect-video w-full bg-gray-100 sm:aspect-[4/3]">
+                  <Image
+                    src={openStop.image}
+                    alt={openStop.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 384px"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    {openStop.description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
