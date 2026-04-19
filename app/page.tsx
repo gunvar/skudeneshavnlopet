@@ -70,7 +70,7 @@ export default function Home() {
 
         <FadeIn>
           <section className="bg-white pb-12 pt-4">
-            <div className="mx-auto flex max-w-[260px] justify-center px-4">
+            <div className="mx-auto flex max-w-[364px] justify-center px-4">
               <a
                 href="https://live.eqtiming.com/80315"
                 target="_blank"
