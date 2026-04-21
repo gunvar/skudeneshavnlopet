@@ -48,7 +48,7 @@ export default function Hero() {
         </h1>
 
         <p className="mb-1 text-lg font-semibold text-white/90 sm:text-xl">
-          Lørdag 13. juni
+          Lørdag 13. juni · Skudeneshavn, Karmøy
         </p>
 
         <p className="mb-8 text-base italic text-white/70 sm:text-lg">

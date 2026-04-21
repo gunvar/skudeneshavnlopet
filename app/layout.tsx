@@ -6,22 +6,28 @@ const SITE_URL = "https://www.skudeneshavnlopet.no";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Skudeneshavnløpet 2026 — Opplev sommerbyen i løpesko 13. juni",
+  title:
+    "Skudeneshavnløpet 2026 — Gateløp på Karmøy 13. juni | Opplev sommerbyen i løpesko",
   description:
-    "Meld deg på Skudeneshavnløpet 13. juni 2026! 500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. NYTT 2026: Lagkonkurranse med vandrepokal. Medalje til alle. Kun 300 plasser — 198 fullførte i 2025.",
+    "Meld deg på Skudeneshavnløpet 13. juni 2026 — gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes). 500 m, 5 km og 10 km. NYTT: Lagkonkurranse. Kun 300 plasser.",
   alternates: {
     canonical: "/",
   },
   keywords: [
     "Skudeneshavnløpet",
     "løp Skudeneshavn",
-    "gateløp Karmøy",
+    "løp Skudnes",
+    "løp på Karmøy",
     "løp Karmøy 2026",
+    "gateløp Karmøy",
+    "gateløp Skudeneshavn",
     "sommerløp Rogaland",
-    "5 km 10 km løp",
+    "løpeløp Haugaland",
     "Havnasprinten",
+    "5 km 10 km løp",
     "SUIL",
     "folkefest Skudeneshavn",
+    "Skudnes",
   ],
   authors: [{ name: "Skudenes UIL" }],
   openGraph: {

@@ -19,14 +19,16 @@ export default function About() {
         </h2>
 
         <p className="mx-auto mb-4 max-w-2xl text-center text-lg leading-relaxed text-gray-700">
-          Er du klar for årets sprekeste folkefest i Skudeneshavn? Enten du
-          jakter på ny personlig rekord i en varierende trasé, eller vil nyte
-          den unike atmosfæren i Gamle Skudeneshavn sammen med familien — dette
-          er løpet for deg!
+          Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på
+          sørspissen av Karmøy — byen lokalbefolkningen kjærlig kaller
+          «Skudnes». Er du klar for årets sprekeste folkefest? Enten du jakter
+          på ny personlig rekord eller vil nyte den unike atmosfæren sammen med
+          familien, er dette løpet for deg!
         </p>
         <p className="mx-auto mb-12 max-w-2xl text-center text-base text-gray-500">
           Vi gjentar suksessen og rigger til for tidenes løpeopplevelse mellom
-          hvitmalte trehus og i de sjarmerende gatene i Sommerbyen.
+          hvitmalte trehus og i de sjarmerende gatene i Sommerbyen — en av
+          Norges best bevarte trehusbyer, beliggende i Karmøy kommune i Rogaland.
         </p>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
