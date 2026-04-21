@@ -2,22 +2,157 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+const SITE_URL = "https://www.skudeneshavnlopet.no";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Skudeneshavnløpet 2026 — Opplev sommerbyen i løpesko 13. juni",
   description:
-    "Meld deg på Skudeneshavnløpet 13. juni 2026! 500m, 5km og 10km gjennom vakre Skudeneshavn. NYTT: Lagkonkurranse med vandrepokal! Medalje til alle. Folkefest for hele familien.",
+    "Meld deg på Skudeneshavnløpet 13. juni 2026! 500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. NYTT 2026: Lagkonkurranse med vandrepokal. Medalje til alle. Kun 300 plasser — 198 fullførte i 2025.",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "Skudeneshavnløpet",
+    "løp Skudeneshavn",
+    "gateløp Karmøy",
+    "løp Karmøy 2026",
+    "sommerløp Rogaland",
+    "5 km 10 km løp",
+    "Havnasprinten",
+    "SUIL",
+    "folkefest Skudeneshavn",
+  ],
+  authors: [{ name: "Skudenes UIL" }],
   openGraph: {
     title: "Skudeneshavnløpet 2026 — Opplev sommerbyen i løpesko",
     description:
-      "Meld deg på Skudeneshavnløpet 13. juni 2026! 500m, 5km og 10km gjennom vakre Skudeneshavn.",
+      "Meld deg på Skudeneshavnløpet 13. juni 2026! 500 m, 5 km og 10 km gjennom vakre Skudeneshavn. Kun 300 plasser.",
     type: "website",
     locale: "nb_NO",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "Skudeneshavnløpet",
+    url: SITE_URL,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Skudeneshavnløpet 2026 — løpere gjennom sommerbyen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skudeneshavnløpet 2026 — 13. juni",
+    description:
+      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. NYTT: Lagkonkurranse. Meld deg på!",
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const sportsEventJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  name: "Skudeneshavnløpet 2026",
+  url: SITE_URL,
+  startDate: "2026-06-13T11:00:00+02:00",
+  endDate: "2026-06-13T14:00:00+02:00",
+  image: [`${SITE_URL}/og-image.jpg`],
+  description:
+    "Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på Karmøy. Distanser 500 m (Havnasprinten for barn), 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Profesjonell tidtaking ved EQ Timing.",
+  location: {
+    "@type": "Place",
+    name: "Torget, Skudeneshavn",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Kirkevegen 4",
+      addressLocality: "Skudeneshavn",
+      postalCode: "4280",
+      addressCountry: "NO",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 59.1419,
+      longitude: 5.2648,
+    },
+  },
+  organizer: [
+    {
+      "@type": "Organization",
+      name: "Skudenes UIL",
+      email: "post@suil.no",
+      url: "https://www.suil.no",
+    },
+    {
+      "@type": "Organization",
+      name: "Skudeneshavn Næringsforening",
+    },
+  ],
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  maximumAttendeeCapacity: 300,
+  offers: [
+    {
+      "@type": "Offer",
+      name: "10 km",
+      price: "350",
+      priceCurrency: "NOK",
+      availability: "https://schema.org/InStock",
+      validFrom: "2025-12-01T00:00:00+01:00",
+      url: "https://live.eqtiming.com/80315",
+    },
+    {
+      "@type": "Offer",
+      name: "5 km",
+      price: "350",
+      priceCurrency: "NOK",
+      availability: "https://schema.org/InStock",
+      validFrom: "2025-12-01T00:00:00+01:00",
+      url: "https://live.eqtiming.com/80315",
+    },
+    {
+      "@type": "Offer",
+      name: "Havnasprinten 500 m (barn)",
+      price: "0",
+      priceCurrency: "NOK",
+      availability: "https://schema.org/InStock",
+      url: "https://live.eqtiming.com/80315",
+    },
+  ],
+  subEvent: [
+    {
+      "@type": "SportsEvent",
+      name: "Havnasprinten 500 m",
+      startDate: "2026-06-13T11:00:00+02:00",
+      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
+    },
+    {
+      "@type": "SportsEvent",
+      name: "Skudeneshavnløpet 10 km",
+      startDate: "2026-06-13T12:00:00+02:00",
+      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
+    },
+    {
+      "@type": "SportsEvent",
+      name: "Skudeneshavnløpet 5 km",
+      startDate: "2026-06-13T12:15:00+02:00",
+      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -35,49 +170,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SportsEvent",
-              name: "Skudeneshavnløpet 2026",
-              startDate: "2026-06-13T11:00:00+02:00",
-              endDate: "2026-06-13T14:00:00+02:00",
-              location: {
-                "@type": "Place",
-                name: "Torget, Skudeneshavn",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Kirkevegen 4",
-                  addressLocality: "Skudeneshavn",
-                  postalCode: "4280",
-                  addressCountry: "NO",
-                },
-              },
-              organizer: {
-                "@type": "Organization",
-                name: "Skudenes UIL",
-                email: "post@suil.no",
-              },
-              description:
-                "Gateløp gjennom vakre Skudeneshavn. 500m, 5km og 10km. Folkefest for hele familien!",
-              eventStatus: "https://schema.org/EventScheduled",
-              eventAttendanceMode:
-                "https://schema.org/OfflineEventAttendanceMode",
-              offers: [
-                {
-                  "@type": "Offer",
-                  name: "5 km / 10 km",
-                  price: "350",
-                  priceCurrency: "NOK",
-                  url: "https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet",
-                },
-                {
-                  "@type": "Offer",
-                  name: "Havnasprinten 500m",
-                  price: "0",
-                  priceCurrency: "NOK",
-                },
-              ],
-            }),
+            __html: JSON.stringify(sportsEventJsonLd),
           }}
         />
       </head>

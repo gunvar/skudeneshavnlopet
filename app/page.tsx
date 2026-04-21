@@ -6,6 +6,7 @@ import Distances from "./components/Distances";
 import CourseMap from "./components/CourseMap";
 import PracticalInfo from "./components/PracticalInfo";
 import Gallery from "./components/Gallery";
+import FAQ from "./components/FAQ";
 import Sponsors from "./components/Sponsors";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
@@ -67,6 +68,14 @@ export default function Home() {
         <FadeIn>
           <PracticalInfo />
         </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-sand" />
+
+        <FadeIn>
+          <FAQ />
+        </FadeIn>
+
+        <WaveDivider from="fill-sand" to="fill-white" flip />
 
         <FadeIn>
           <section className="bg-white pb-12 pt-4">

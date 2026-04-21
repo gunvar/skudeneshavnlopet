@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "#distanser", label: "Distanser" },
   { href: "#loypekart", label: "Løypekart" },
   { href: "#praktisk", label: "Praktisk" },
+  { href: "#faq", label: "FAQ" },
   { href: "#galleri", label: "Galleri" },
   { href: "#sponsorer", label: "Sponsorer" },
   { href: "#resultater", label: "Resultater" },
