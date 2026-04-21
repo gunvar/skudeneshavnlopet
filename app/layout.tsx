@@ -68,6 +68,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "tFmAY3jada0Fk7e8CE8mqgPKvZ4OAcIsUZPHhGyanjs",
+  },
 };
 
 const sportsEventJsonLd = {
