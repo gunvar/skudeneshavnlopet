@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     "Skudeneshavnløpet 2026 — Gateløp på Karmøy 13. juni | Opplev sommerbyen i løpesko",
   description:
-    "Meld deg på Skudeneshavnløpet 13. juni 2026 — gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes). 500 m, 5 km og 10 km. NYTT: Lagkonkurranse. Kun 300 plasser.",
+    "Meld deg på Skudeneshavnløpet 13. juni 2026 — gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes). 500 m, 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Kun 300 plasser.",
   alternates: {
     canonical: "/",
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Skudeneshavnløpet 2026 — 13. juni",
     description:
-      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. NYTT: Lagkonkurranse. Meld deg på!",
+      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. Lagkonkurranse med vandrepokal på 5 km. Meld deg på!",
     images: ["/og-image.jpg"],
   },
   icons: {

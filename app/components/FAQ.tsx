@@ -16,8 +16,8 @@ const faqs: { q: string; a: string }[] = [
     a: "Havnasprinten for barn er gratis. 5 km og 10 km koster 350 kr. Meld deg på via EQ Timing på live.eqtiming.com/80315.",
   },
   {
-    q: "Hvordan fungerer lagkonkurransen (nytt i 2026)?",
-    a: "Nytt i 2026 er lagkonkurransen på 5 km med vandrepokal for beste lag. Hvert lag må ha minimum 3 deltakere (ingen øvre grense), og de 3 beste tidene på laget teller i sammenlagt. Perfekt for bedrifter, vennegjenger eller familier.",
+    q: "Hvordan fungerer lagkonkurransen?",
+    a: "Lagkonkurransen går på 5 km med vandrepokal for beste lag — en tradisjon vi har hatt siden 2024. Hvert lag må ha minimum 3 deltakere (ingen øvre grense), og de 3 beste tidene på laget teller i sammenlagt. Det er ingen egen lagpåmelding — alle melder seg på individuelt, men deltakere som skal være på samme lag må oppgi samme lagnavn ved registrering. Perfekt for bedrifter, vennegjenger eller familier.",
   },
   {
     q: "Får alle medalje?",
