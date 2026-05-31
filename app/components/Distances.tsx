@@ -133,7 +133,7 @@ export default function Distances() {
             {/* Copy */}
             <div>
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-amber-300">
-                Lagkonkurranse · Nytt for bedrifter
+                Lagkonkurranse · Tradisjon siden 2024
               </p>
               <h3
                 className="text-3xl font-extrabold leading-[1.1] text-white sm:text-4xl"
