@@ -53,9 +53,23 @@ export default function Kampanje() {
         </div>
 
         {/* Banner 2 — HAVN burgermeny */}
-        <div className="overflow-hidden rounded-3xl bg-ocean-dark shadow-xl">
+        <a
+          href="https://havnhotell.no/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block overflow-hidden rounded-3xl bg-ocean-dark shadow-xl transition-all hover:shadow-2xl"
+          aria-label="HAVN Hotell & Restaurant — åpne nettsiden i ny fane"
+        >
           <div className="grid items-center gap-8 p-7 sm:grid-cols-[1.4fr_1fr] sm:p-10">
             <div className="text-white">
+              <Image
+                src="/images/partnere/havn-liggende-negativ.svg"
+                alt="HAVN Hotell & Restaurant"
+                width={643}
+                height={190}
+                unoptimized
+                className="mb-5 h-12 w-auto sm:h-14"
+              />
               <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-coral">
                 Etter målgang?
               </p>
@@ -69,6 +83,12 @@ export default function Kampanje() {
                 Som deltaker får du kupong med burgermeny ved målgang. Perfekt
                 for å feire innsatsen med venner, kollegaer og andre løpere.
               </p>
+              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors group-hover:text-white">
+                Besøk havnhotell.no
+                <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
+                </svg>
+              </span>
             </div>
 
             {/* Løperkupong */}
@@ -96,7 +116,7 @@ export default function Kampanje() {
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );
