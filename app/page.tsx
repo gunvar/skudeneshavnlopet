@@ -17,6 +17,7 @@ import Prizes from "./components/Prizes";
 import Sommerbyen from "./components/Sommerbyen";
 import ImageBreak from "./components/ImageBreak";
 import RaceDayBanner from "./components/RaceDayBanner";
+import Kampanje from "./components/Kampanje";
 
 export default function Home() {
   return (
@@ -76,6 +77,10 @@ export default function Home() {
         </FadeIn>
 
         <WaveDivider from="fill-sand" to="fill-white" flip />
+
+        <FadeIn>
+          <Kampanje />
+        </FadeIn>
 
         <FadeIn>
           <section className="bg-white pb-12 pt-4">

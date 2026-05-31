@@ -29,7 +29,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Når henter jeg startnummer?",
-    a: "Startnummer hentes i teltet på Torget fra kl. 10:00 samme dag. Meld deg på senest 8. juni 2026 hvis du vil ha navnet ditt trykket på startnummeret.",
+    a: "Startnummer hentes i teltet på Torget fra kl. 10:00–11:30 samme dag. Meld deg på senest 1. juni 2026 hvis du vil ha navnet ditt trykket på startnummeret.",
   },
   {
     q: "Kan barn delta?",
