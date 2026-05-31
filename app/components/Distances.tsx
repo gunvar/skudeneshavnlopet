@@ -99,37 +99,80 @@ export default function Distances() {
           ))}
         </div>
 
-        {/* Lagkonkurranse highlight */}
-        <div className="mt-8 overflow-hidden rounded-2xl bg-gradient-to-r from-ocean to-ocean-light p-6 text-white shadow-lg sm:p-8">
-          <div className="flex flex-col items-center text-center sm:flex-row sm:text-left">
-            <div className="relative mb-4 h-20 w-16 shrink-0 sm:mb-0 sm:mr-6">
+        {/* Lagkonkurranse — Vandrepokal */}
+        <div className="relative mt-10 overflow-hidden rounded-[1.75rem] border border-amber-300/25 bg-gradient-to-br from-[#103149] via-[#0a2233] to-[#050f18] shadow-2xl">
+          {/* Ambient gold glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(212,175,55,0.35), transparent 70%)" }}
+          />
+          {/* Subtle top hairline */}
+          <div
+            aria-hidden
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-200/60 to-transparent"
+          />
+
+          <div className="relative grid items-center gap-6 p-8 text-center sm:grid-cols-[minmax(0,0.9fr)_1.4fr] sm:gap-10 sm:p-12 sm:text-left">
+            {/* Trophy in spotlight */}
+            <div className="relative mx-auto flex h-56 w-full items-center justify-center sm:h-80">
+              <div
+                aria-hidden
+                className="absolute h-44 w-44 rounded-full blur-2xl sm:h-60 sm:w-60"
+                style={{ background: "radial-gradient(circle, rgba(245,215,122,0.45), transparent 65%)" }}
+              />
               <Image
-                src="/images/vandrepokal.jpg"
-                alt="Vandrepokalen for lagkonkurransen"
-                fill
-                className="object-contain drop-shadow-lg"
+                src="/images/vandrepokal-cutout.png"
+                alt="Vandrepokalen som vinnerlaget på 5 km får — en eksklusiv sølvpokal"
+                width={649}
+                height={1413}
+                className="relative h-full w-auto object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.6)]"
               />
             </div>
-            <div className="flex-1">
+
+            {/* Copy */}
+            <div>
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-amber-300">
+                Lagkonkurranse · Nytt for bedrifter
+              </p>
               <h3
-                className="mb-2 text-xl font-extrabold sm:text-2xl"
+                className="text-3xl font-extrabold leading-[1.1] text-white sm:text-4xl"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Lagkonkurranse — Vandrepokal p&aring; 5 km
+                Vinn{" "}
+                <span className="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+                  vandrepokalen
+                </span>{" "}
+                på 5 km
               </h3>
-              <p className="text-sm text-white/85">
-                Stil lag på 5 km! Minimum 3 deltakere per lag — de 3 beste
-                tidene teller. Perfekt for bedrifter og vennegjenger!
+              <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/75 sm:mx-0 sm:text-base">
+                Den gjeveste premien i løpet. Still bedriftslaget, vennegjengen
+                eller familien — de 3 beste tidene teller, og vinnerlaget får
+                navnet sitt gravert på pokalen og tar den med hjem til neste år.
               </p>
+
+              <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
+                {["Minimum 3 per lag", "Beste 3 tider teller", "Gravert vinnernavn"].map(
+                  (chip) => (
+                    <span
+                      key={chip}
+                      className="rounded-full border border-amber-200/20 bg-white/5 px-4 py-1.5 text-xs font-semibold text-amber-100/90 backdrop-blur-sm"
+                    >
+                      {chip}
+                    </span>
+                  ),
+                )}
+              </div>
+
+              <a
+                href={REGISTRATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-block rounded-full bg-coral px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:bg-coral-dark hover:shadow-xl active:scale-95"
+              >
+                Meld på laget!
+              </a>
             </div>
-            <a
-              href={REGISTRATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 shrink-0 rounded-full bg-coral px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:bg-coral-dark sm:ml-6 sm:mt-0"
-            >
-              Meld på laget!
-            </a>
           </div>
         </div>
       </div>
