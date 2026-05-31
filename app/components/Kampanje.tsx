@@ -93,6 +93,16 @@ export default function Kampanje() {
 
             {/* Løperkupong */}
             <div className="rounded-2xl bg-white p-6 text-center shadow-lg">
+              <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-ocean-dark">
+                <Image
+                  src="/images/partnere/havn-ikon-hvit.svg"
+                  alt="HAVN"
+                  width={398}
+                  height={398}
+                  unoptimized
+                  className="h-8 w-8"
+                />
+              </span>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-coral">
                 Løperkupong
               </p>

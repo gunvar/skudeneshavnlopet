@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const schedule = [
-  { time: "10:00", event: "Registrering og henting av startnummer", place: "Teltet på Torget" },
+  { time: "10:00", event: "Registrering og henting av startnummer", place: "Teltet på Torget — hent startnummeret innen kl. 11:30" },
   { time: "11:00", event: "Havnasprinten (500m)", place: "Start ved Torget" },
   { time: "12:00", event: "10 km", place: "Start ved Torget" },
   { time: "12:15", event: "5 km", place: "Start ved Torget" },
@@ -14,7 +14,7 @@ const infoSections = [
   {
     title: "Startnummer og registrering",
     content:
-      "Hent startnummer i teltet på Torget fra kl. 10:00. Meld deg på innen 8. juni for å få navnet ditt på startnummeret. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
+      "Hent startnummer i teltet på Torget fra kl. 10:00–11:30 samme dag. Meld deg på innen 1. juni for å få navnet ditt på startnummeret. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
   },
   {
     title: "Parkering (gratis)",
