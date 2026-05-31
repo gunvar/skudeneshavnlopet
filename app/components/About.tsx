@@ -18,14 +18,14 @@ export default function About() {
           Om løpet
         </h2>
 
-        <p className="mx-auto mb-4 max-w-2xl text-center text-lg leading-relaxed text-gray-700">
+        <p className="mx-auto mb-4 max-w-2xl text-left text-lg leading-relaxed text-gray-700 sm:text-center">
           Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på
           sørspissen av Karmøy — byen lokalbefolkningen kjærlig kaller
           «Skudnes». Er du klar for årets sprekeste folkefest? Enten du jakter
           på ny personlig rekord eller vil nyte den unike atmosfæren sammen med
           familien, er dette løpet for deg!
         </p>
-        <p className="mx-auto mb-12 max-w-2xl text-center text-base text-gray-500">
+        <p className="mx-auto mb-12 max-w-2xl text-left text-base leading-relaxed text-gray-500 sm:text-center">
           Vi gjentar suksessen og rigger til for tidenes løpeopplevelse mellom
           hvitmalte trehus og i de sjarmerende gatene i Sommerbyen — en av
           Norges best bevarte trehusbyer, beliggende i Karmøy kommune i Rogaland.

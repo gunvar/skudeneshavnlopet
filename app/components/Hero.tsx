@@ -41,7 +41,7 @@ export default function Hero() {
         />
 
         <h1
-          className="mb-2 text-[2rem] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl"
+          className="mb-2 text-[clamp(1.45rem,6.6vw,2rem)] font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-7xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           SKUDENESHAVNLØPET 2026
@@ -72,12 +72,27 @@ export default function Hero() {
         <div className="mt-6 flex flex-col items-center gap-2">
           <div className="flex items-center gap-3 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
             <div className="flex -space-x-2">
-              <div className="h-6 w-6 rounded-full bg-coral/80 ring-2 ring-white/20" />
-              <div className="h-6 w-6 rounded-full bg-ocean-light/80 ring-2 ring-white/20" />
-              <div className="h-6 w-6 rounded-full bg-coral/60 ring-2 ring-white/20" />
+              {[
+                { src: "/images/galleri/premiering.jpg", pos: "object-top" },
+                { src: "/images/galleri/2025-10.jpg", pos: "object-center" },
+                { src: "/images/galleri/2025-09.jpg", pos: "object-top" },
+              ].map((a) => (
+                <span
+                  key={a.src}
+                  className="relative h-7 w-7 overflow-hidden rounded-full ring-2 ring-white/40"
+                >
+                  <Image
+                    src={a.src}
+                    alt=""
+                    fill
+                    sizes="28px"
+                    className={`object-cover ${a.pos}`}
+                  />
+                </span>
+              ))}
             </div>
-            <span className="text-sm font-medium text-white/80">
-              Kun 300 plasser — 198 fullførte i 2025
+            <span className="text-sm font-medium text-white/90">
+              198 fullførte i 2025 — kun 300 plasser
             </span>
           </div>
           <p className="text-xs text-white/50">
