@@ -3,7 +3,7 @@ import Image from "next/image";
 const hovedsponsorer = [
   {
     name: "Skudenes & Aakra Sparebank",
-    logo: "/images/sponsorer/sponsorer_0014_Layer-1-1.webp",
+    logo: "/images/sponsorer/skudenes-aakra-sparebank.png",
     url: "https://www.skudenesaakra.no/",
   },
   {
@@ -22,7 +22,7 @@ const sponsorer = [
   },
   {
     name: "VB - Kristoffer Sirevåg",
-    logo: "/images/sponsorer/VB_Kristoffer_Sirevåg.jpg",
+    logo: "/images/sponsorer/vb-kristoffer-sirevag.png",
     textLogo: false,
     url: null,
   },
@@ -41,7 +41,7 @@ const sponsorer = [
   },
   {
     name: "Rema 1000",
-    logo: "/images/sponsorer/rema-1000-logo-png_seeklogo-117380.png",
+    logo: "/images/sponsorer/rema-1000.png",
     textLogo: false,
     url: "https://www.rema.no/",
   },
@@ -49,7 +49,7 @@ const sponsorer = [
 
 const arrangor = {
   name: "Skudenes UIL",
-  logo: "/images/sponsorer/suil.webp",
+  logo: "/images/sponsorer/suil.png",
   url: null,
 };
 
