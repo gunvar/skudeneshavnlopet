@@ -16,8 +16,8 @@ const hovedsponsorer = [
 const sponsorer = [
   {
     name: "Brødr. Olsen Mur & Bygg",
-    logo: null,
-    textLogo: true,
+    logo: "/images/sponsorer/brodr-olsen-positiv.png",
+    textLogo: false,
     url: "https://www.br-olsen.no/",
   },
   {
@@ -67,19 +67,7 @@ function SponsorCard({
     <div
       className={`flex flex-col items-center justify-center rounded-xl border border-gray-100 bg-white ${padding} text-center transition-all hover:shadow-md ${sponsor.url ? "cursor-pointer hover:-translate-y-0.5" : ""}`}
     >
-      {sponsor.textLogo ? (
-        <div className={`flex ${imgHeight} items-center justify-center`}>
-          <p
-            className="text-base font-extrabold leading-tight text-ocean-dark sm:text-lg"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Brødr. Olsen
-            <span className="block text-[10px] font-semibold uppercase tracking-widest text-gray-400">
-              Mur &amp; Bygg
-            </span>
-          </p>
-        </div>
-      ) : sponsor.logo ? (
+      {sponsor.logo ? (
         <div className={`relative ${imgHeight} w-full`}>
           <Image
             src={sponsor.logo}
