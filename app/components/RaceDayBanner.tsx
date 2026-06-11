@@ -21,8 +21,8 @@ const quickLinks = [
   },
   {
     label: "Parkering",
-    sub: "3 steder",
-    url: "https://maps.app.goo.gl/S37xibKcZ7KHZtRP7",
+    sub: "3 steder — se kart",
+    url: "#parkering",
     icon: "🅿️",
   },
   {
@@ -78,7 +78,7 @@ export default function RaceDayBanner() {
   const { index: activeIndex, status } = getActiveEvent(currentTime);
 
   return (
-    <div className="bg-gradient-to-r from-coral to-coral-dark text-white">
+    <div className="relative bg-gradient-to-r from-coral to-coral-dark text-white">
       {/* Dismiss */}
       <button
         onClick={() => setDismissed(true)}
@@ -133,8 +133,9 @@ export default function RaceDayBanner() {
             <a
               key={link.label}
               href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(link.url.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="flex items-center gap-2.5 rounded-xl bg-white/15 px-4 py-3 backdrop-blur-sm transition-all hover:bg-white/25"
             >
               <span className="text-xl">{link.icon}</span>

@@ -25,7 +25,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Er det offisiell tidtaking?",
-    a: "Ja, tidtakingen utføres profesjonelt av EQ Timing. Alle deltakere på 5 km og 10 km får chip-tid. Resultater publiseres umiddelbart etter løpet.",
+    a: "Ja, tidtakingen utføres profesjonelt av EQ Timing. Alle deltakere på 5 km og 10 km får chip-tid. På løpsdagen kan du følge resultatene live på live.eqtiming.com/80315 — samme side som påmeldingen — og endelige resultater publiseres der umiddelbart etter løpet.",
   },
   {
     q: "Når henter jeg startnummer?",
@@ -37,7 +37,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Hvor parkerer jeg?",
-    a: "Det er gratis parkering flere steder rundt sentrum i Skudeneshavn. Vi anbefaler å komme i god tid og å samkjøre hvis mulig — det er yrende folkeliv i sentrum løpsdagen.",
+    a: "Det er gratis parkering tre steder nær sentrum: ved biblioteket, ved den gamle ferjekaien og ved Kanalvegen (KIWI). Kartlenker til alle tre finner du under Praktisk informasjon. Kom i god tid og samkjør gjerne — det er yrende folkeliv i sentrum på løpsdagen.",
   },
   {
     q: "Hvem arrangerer Skudeneshavnløpet?",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const schedule = [
   { time: "10:00", event: "Registrering og henting av startnummer", place: "Teltet på Torget — hent startnummeret innen kl. 11:30" },
@@ -10,7 +10,14 @@ const schedule = [
   { time: "13:15", event: "Premieutdeling", place: "Bade-Olena" },
 ];
 
-const infoSections = [
+type InfoLink = { label: string; url: string; live?: boolean };
+
+const infoSections: {
+  title: string;
+  content: string | null;
+  id?: string;
+  links?: InfoLink[];
+}[] = [
   {
     title: "Startnummer og registrering",
     content:
@@ -19,6 +26,7 @@ const infoSections = [
   {
     title: "Parkering (gratis)",
     content: null,
+    id: "parkering",
     links: [
       { label: "Ved biblioteket", url: "https://maps.app.goo.gl/S37xibKcZ7KHZtRP7" },
       { label: "Ved den gamle ferjekaien", url: "https://maps.app.goo.gl/irnhFVE1JfvsJUXb7" },
@@ -38,20 +46,42 @@ const infoSections = [
     content:
       "Medaljer til alle som fullfører 5 km og 10 km! Topp 3 damer og herrer i begge distanser vinner gavekort: 1. plass 1500 kr, 2. plass 1000 kr, 3. plass 500 kr. Premieutdeling på Bade-Olena kl. 13:15.",
   },
+  {
+    title: "Live-resultater på løpsdagen",
+    content:
+      "Tidtakingen utføres profesjonelt av EQ Timing. På løpsdagen kan både løpere og publikum følge resultatene live etter hvert som løperne passerer mål — på samme side som påmeldingen.",
+    links: [
+      { label: "Følg resultatene live (EQ Timing)", url: "https://live.eqtiming.com/80315", live: true },
+    ],
+  },
 ];
 
 function Accordion({
   title,
   children,
   defaultOpen = false,
+  id,
 }: {
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
+  id?: string;
 }) {
   const [open, setOpen] = useState(defaultOpen);
+
+  // Åpne automatisk når noen følger en #anker-lenke hit (f.eks. fra løpsdag-banneret)
+  useEffect(() => {
+    if (!id) return;
+    const openOnHash = () => {
+      if (window.location.hash === `#${id}`) setOpen(true);
+    };
+    openOnHash();
+    window.addEventListener("hashchange", openOnHash);
+    return () => window.removeEventListener("hashchange", openOnHash);
+  }, [id]);
+
   return (
-    <div className="border-b border-gray-200">
+    <div id={id} className="scroll-mt-28 border-b border-gray-200">
       <button
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between py-4 text-left"
@@ -116,7 +146,12 @@ export default function PracticalInfo() {
         {/* Accordion info */}
         <div className="rounded-2xl bg-sand p-6 sm:p-8">
           {infoSections.map((section, i) => (
-            <Accordion key={section.title} title={section.title} defaultOpen={i === 0}>
+            <Accordion
+              key={section.title}
+              title={section.title}
+              defaultOpen={i === 0}
+              id={section.id}
+            >
               {section.content && <p>{section.content}</p>}
               {section.links && (
                 <ul className="mt-2 space-y-2">
@@ -128,13 +163,20 @@ export default function PracticalInfo() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-ocean hover:text-coral hover:underline"
                       >
-                        <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                          <path
-                            fillRule="evenodd"
-                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        {link.live ? (
+                          <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
+                            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-coral" />
+                          </span>
+                        ) : (
+                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                              fillRule="evenodd"
+                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        )}
                         {link.label}
                       </a>
                     </li>

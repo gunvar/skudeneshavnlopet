@@ -88,9 +88,21 @@ export default function Countdown() {
 
   if (!timeLeft) {
     return (
-      <p className="text-xl font-bold text-white">
-        Løpet er i gang!
-      </p>
+      <div className="flex flex-col items-center gap-3">
+        <p className="text-xl font-bold text-white">Løpet er i gang! 🎉</p>
+        <a
+          href="https://live.eqtiming.com/80315"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-white/15 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/25"
+        >
+          <span className="relative flex h-2 w-2" aria-hidden="true">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-coral" />
+          </span>
+          Følg resultatene live →
+        </a>
+      </div>
     );
   }
 
