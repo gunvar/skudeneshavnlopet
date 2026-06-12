@@ -60,7 +60,7 @@ export default function Prizes() {
         </div>
 
         <p className="mt-8 text-center text-sm text-gray-500">
-          Premieutdeling på Bade-Olena kl. 13:15 — damer og herrer i 5 km og 10 km
+          Premieutdeling på Torget kl. 13:15 — damer og herrer i 5 km og 10 km
         </p>
       </div>
     </section>

@@ -7,7 +7,7 @@ const schedule = [
   { time: "11:00", event: "Havnasprinten (500m)", place: "Start ved Torget" },
   { time: "12:00", event: "10 km", place: "Start ved Torget" },
   { time: "12:15", event: "5 km", place: "Start ved Torget" },
-  { time: "13:15", event: "Premieutdeling", place: "Bade-Olena" },
+  { time: "13:15", event: "Premieutdeling", place: "Torget" },
 ];
 
 type InfoLink = { label: string; url: string; live?: boolean };
@@ -44,7 +44,7 @@ const infoSections: {
   {
     title: "Premiering",
     content:
-      "Medaljer til alle som fullfører 5 km og 10 km! Topp 3 damer og herrer i begge distanser vinner gavekort: 1. plass 1500 kr, 2. plass 1000 kr, 3. plass 500 kr. Premieutdeling på Bade-Olena kl. 13:15.",
+      "Medaljer til alle som fullfører 5 km og 10 km! Topp 3 damer og herrer i begge distanser vinner gavekort: 1. plass 1500 kr, 2. plass 1000 kr, 3. plass 500 kr. Premieutdeling på Torget kl. 13:15.",
   },
   {
     title: "Live-resultater på løpsdagen",
