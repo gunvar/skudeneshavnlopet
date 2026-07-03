@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function About() {
   const highlights = [
     { number: "3", label: "distanser", desc: "500m · 5km · 10km" },
-    { number: "198", label: "deltakere i 2025", desc: "Voksende folkefest!" },
-    { number: "4.", label: "gang i 2026", desc: "Arrangert siden 2023" },
+    { number: "262", label: "deltakere i 2026", desc: "+32 % vekst fra 2025!" },
+    { number: "5.", label: "gang i 2027", desc: "Arrangert siden 2023" },
     { number: "🏆", label: "Lagkonkurranse", desc: "Vandrepokal på 5km" },
   ];
 
@@ -56,14 +56,14 @@ export default function About() {
             Profesjonell tidtaking ved <strong className="text-ocean">EQ Timing</strong> — medalje til alle som fullfører
           </p>
           <a
-            href="https://live.eqtiming.com/80315"
+            href="https://live.eqtiming.com/80315#result"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block transition-opacity hover:opacity-80"
           >
             <Image
               src="/images/samarbeidspartnere/EQ-Timing-logo.png"
-              alt="EQ Timing — klikk for påmelding"
+              alt="EQ Timing — se resultatene fra 2026"
               width={120}
               height={40}
               className="h-9 w-auto"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -16,8 +15,7 @@ import MobileCTA from "./components/MobileCTA";
 import Prizes from "./components/Prizes";
 import Sommerbyen from "./components/Sommerbyen";
 import ImageBreak from "./components/ImageBreak";
-import RaceDayBanner from "./components/RaceDayBanner";
-import Kampanje from "./components/Kampanje";
+import Winners2026 from "./components/Winners2026";
 
 export default function Home() {
   return (
@@ -26,10 +24,15 @@ export default function Home() {
       <MobileCTA />
       <main>
         <Hero />
-        <RaceDayBanner />
 
         <FadeIn>
           <About />
+        </FadeIn>
+
+        <WaveDivider from="fill-white" to="fill-white" />
+
+        <FadeIn>
+          <Winners2026 />
         </FadeIn>
 
         <WaveDivider from="fill-white" to="fill-sand" />
@@ -77,34 +80,6 @@ export default function Home() {
         </FadeIn>
 
         <WaveDivider from="fill-sand" to="fill-white" flip />
-
-        <FadeIn>
-          <Kampanje />
-        </FadeIn>
-
-        <FadeIn>
-          <section className="bg-white pb-12 pt-4">
-            <div className="mx-auto flex max-w-[364px] justify-center px-4">
-              <a
-                href="https://live.eqtiming.com/80315"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block w-full overflow-hidden rounded-2xl shadow-lg transition-transform hover:scale-[1.02] hover:shadow-xl"
-                aria-label="Meld deg på Skudeneshavnløpet 2026"
-              >
-                <Image
-                  src="/images/galleri/loper-mal.jpg"
-                  alt="Lørdag 13. juni 2026 — Påmeldingen er åpen"
-                  width={600}
-                  height={600}
-                  className="h-auto w-full"
-                />
-              </a>
-            </div>
-          </section>
-        </FadeIn>
-
-        <WaveDivider from="fill-white" to="fill-white" />
 
         <FadeIn>
           <Sponsors />

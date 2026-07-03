@@ -144,14 +144,14 @@ export default function Sponsors() {
             className="mb-2 text-xl font-bold"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Bli sponsor for Skudeneshavnløpet 2026!
+            Bli sponsor for Skudeneshavnløpet 2027!
           </h3>
           <p className="mx-auto mb-5 max-w-lg text-sm text-white/80">
             Vi har sponsorpakker fra 1 000 til 20 000 kr. Overskuddet går
             uavkortet til SUIL og lokalidretten. Ta kontakt for å høre mer!
           </p>
           <a
-            href="mailto:post@suil.no?subject=Sponsorpakke%20Skudeneshavnl%C3%B8pet%202026"
+            href="mailto:post@suil.no?subject=Sponsorpakke%20Skudeneshavnl%C3%B8pet%202027"
             className="inline-block rounded-full bg-white px-6 py-3 text-sm font-bold text-ocean-dark transition-all hover:scale-105 hover:shadow-lg"
           >
             Ta kontakt — post@suil.no

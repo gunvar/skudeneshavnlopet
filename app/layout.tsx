@@ -7,9 +7,9 @@ const SITE_URL = "https://www.skudeneshavnlopet.no";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "Skudeneshavnløpet 2026 — Gateløp på Karmøy 13. juni | Opplev sommerbyen i løpesko",
+    "Skudeneshavnløpet 2027 — Gateløp på Karmøy i juni | Opplev sommerbyen i løpesko",
   description:
-    "Meld deg på Skudeneshavnløpet 13. juni 2026 — gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes). 500 m, 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Kun 300 plasser.",
+    "Skudeneshavnløpet 2027 arrangeres i juni — dato annonseres og påmeldingen åpner i september. Gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes): 500 m, 5 km og 10 km. Se resultater og bilder fra 2026.",
   alternates: {
     canonical: "/",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "løp Skudeneshavn",
     "løp Skudnes",
     "løp på Karmøy",
-    "løp Karmøy 2026",
+    "løp Karmøy 2027",
     "gateløp Karmøy",
     "gateløp Skudeneshavn",
     "sommerløp Rogaland",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Skudenes UIL" }],
   openGraph: {
-    title: "Skudeneshavnløpet 2026 — Opplev sommerbyen i løpesko",
+    title: "Skudeneshavnløpet 2027 — Opplev sommerbyen i løpesko",
     description:
-      "Meld deg på Skudeneshavnløpet 13. juni 2026! 500 m, 5 km og 10 km gjennom vakre Skudeneshavn. Kun 300 plasser.",
+      "Skudeneshavnløpet 2027 går i juni — dato og påmelding annonseres i september. 500 m, 5 km og 10 km gjennom vakre Skudeneshavn.",
     type: "website",
     locale: "nb_NO",
     siteName: "Skudeneshavnløpet",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skudeneshavnløpet 2026 — 13. juni",
+    title: "Skudeneshavnløpet 2027 — juni 2027",
     description:
-      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. Lagkonkurranse med vandrepokal på 5 km. Meld deg på!",
+      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. Dato annonseres og påmeldingen åpner i september.",
     images: ["/og-image.jpg"],
   },
   icons: {
@@ -76,13 +76,13 @@ export const metadata: Metadata = {
 const sportsEventJsonLd = {
   "@context": "https://schema.org",
   "@type": "SportsEvent",
-  name: "Skudeneshavnløpet 2026",
+  name: "Skudeneshavnløpet 2027",
   url: SITE_URL,
-  startDate: "2026-06-13T11:00:00+02:00",
-  endDate: "2026-06-13T14:00:00+02:00",
+  // Nøyaktig dato annonseres i september — måned-presisjon inntil videre
+  startDate: "2027-06",
   image: [`${SITE_URL}/og-image.jpg`],
   description:
-    "Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på Karmøy. Distanser 500 m (Havnasprinten for barn), 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Profesjonell tidtaking ved EQ Timing.",
+    "Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på Karmøy. Distanser 500 m (Havnasprinten for barn), 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Profesjonell tidtaking ved EQ Timing. Dato for 2027 annonseres i september, samtidig som påmeldingen åpner.",
   location: {
     "@type": "Place",
     name: "Torget, Skudeneshavn",
@@ -113,55 +113,6 @@ const sportsEventJsonLd = {
   ],
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  maximumAttendeeCapacity: 300,
-  offers: [
-    {
-      "@type": "Offer",
-      name: "10 km",
-      price: "350",
-      priceCurrency: "NOK",
-      availability: "https://schema.org/InStock",
-      validFrom: "2025-12-01T00:00:00+01:00",
-      url: "https://live.eqtiming.com/80315",
-    },
-    {
-      "@type": "Offer",
-      name: "5 km",
-      price: "350",
-      priceCurrency: "NOK",
-      availability: "https://schema.org/InStock",
-      validFrom: "2025-12-01T00:00:00+01:00",
-      url: "https://live.eqtiming.com/80315",
-    },
-    {
-      "@type": "Offer",
-      name: "Havnasprinten 500 m (barn)",
-      price: "0",
-      priceCurrency: "NOK",
-      availability: "https://schema.org/InStock",
-      url: "https://live.eqtiming.com/80315",
-    },
-  ],
-  subEvent: [
-    {
-      "@type": "SportsEvent",
-      name: "Havnasprinten 500 m",
-      startDate: "2026-06-13T11:00:00+02:00",
-      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
-    },
-    {
-      "@type": "SportsEvent",
-      name: "Skudeneshavnløpet 10 km",
-      startDate: "2026-06-13T12:00:00+02:00",
-      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
-    },
-    {
-      "@type": "SportsEvent",
-      name: "Skudeneshavnløpet 5 km",
-      startDate: "2026-06-13T12:15:00+02:00",
-      location: { "@type": "Place", name: "Torget, Skudeneshavn" },
-    },
-  ],
 };
 
 export default function RootLayout({

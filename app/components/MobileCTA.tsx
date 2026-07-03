@@ -21,17 +21,19 @@ export default function MobileCTA() {
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="text-xs font-semibold text-ocean-dark truncate">
-              Kun 300 plasser!
+              Neste løp: juni 2027
             </p>
-            <p className="text-[10px] text-coral font-medium">Sikre deg plass — 13. juni</p>
+            <p className="text-[10px] text-coral font-medium">
+              Dato og påmelding annonseres i september
+            </p>
           </div>
           <a
-            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
+            href="https://www.facebook.com/share/17xXiKoLHn/"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all active:scale-95"
           >
-            Meld deg på!
+            Følg oss
           </a>
         </div>
       </div>

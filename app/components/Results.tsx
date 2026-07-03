@@ -1,4 +1,5 @@
 const results = [
+  { year: "2026", url: "https://live.eqtiming.com/80315#result", participants: "262 deltakere" },
   { year: "2025", url: "https://live.eqtiming.com/77221#result", participants: "198 deltakere" },
   { year: "2024", url: "https://live.eqtiming.com/70856#result", participants: "Andre arrangement" },
   { year: "2023", url: "https://live.eqtiming.com/65870#result", participants: "Første arrangement" },
@@ -15,44 +16,8 @@ export default function Results() {
           Resultater
         </h2>
         <p className="mb-8 text-center text-gray-600">
-          Tidtaking ved EQ Timing — følg løpet live på løpsdagen, og se resultater fra tidligere år.
+          Tidtaking ved EQ Timing — se komplette resultater fra alle år.
         </p>
-
-        {/* Live-resultater 2026 */}
-        <a
-          href="https://live.eqtiming.com/80315"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-3 flex items-center justify-between rounded-xl bg-ocean p-5 text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-ocean-dark hover:shadow-lg"
-        >
-          <div>
-            <span className="flex items-center gap-2.5">
-              <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-coral" />
-              </span>
-              <span
-                className="text-xl font-extrabold"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                2026
-              </span>
-              <span className="rounded-full bg-coral px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide">
-                Live
-              </span>
-            </span>
-            <span className="mt-1 block text-sm text-white/80">
-              Følg resultatene direkte på løpsdagen — 13. juni
-            </span>
-          </div>
-          <svg className="h-5 w-5 shrink-0 text-white/80" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fillRule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
 
         <div className="space-y-3">
           {results.map((r) => (

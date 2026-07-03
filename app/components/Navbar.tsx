@@ -82,14 +82,9 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-coral-dark hover:shadow-xl"
-          >
-            Meld deg på!
-          </a>
+          <span className="whitespace-nowrap rounded-full bg-ocean px-5 py-2.5 text-sm font-bold text-white shadow-lg">
+            Påmelding åpner i september
+          </span>
         </div>
 
         {/* Mobile hamburger */}
@@ -126,14 +121,9 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 rounded-full bg-coral px-6 py-3 text-base font-bold text-white shadow-lg"
-            >
-              Meld deg på!
-            </a>
+            <span className="mt-2 rounded-full bg-ocean px-6 py-3 text-base font-bold text-white shadow-lg">
+              Påmelding åpner i september
+            </span>
           </div>
         </div>
       )}

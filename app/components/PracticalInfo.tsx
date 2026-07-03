@@ -21,7 +21,7 @@ const infoSections: {
   {
     title: "Startnummer og registrering",
     content:
-      "Hent startnummer i teltet på Torget fra kl. 10:00–11:30 samme dag. Meld deg på innen 1. juni for å få navnet ditt på startnummeret. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
+      "Startnummer hentes i teltet på Torget på løpsdagen. Frister og detaljer for 2027 kommer sammen med påmeldingen i september. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
   },
   {
     title: "Parkering (gratis)",
@@ -47,11 +47,11 @@ const infoSections: {
       "Medaljer til alle som fullfører 5 km og 10 km! Topp 3 damer og herrer i begge distanser vinner gavekort: 1. plass 1500 kr, 2. plass 1000 kr, 3. plass 500 kr. Premieutdeling på Torget kl. 13:15.",
   },
   {
-    title: "Live-resultater på løpsdagen",
+    title: "Resultater og tidtaking",
     content:
-      "Tidtakingen utføres profesjonelt av EQ Timing. På løpsdagen kan både løpere og publikum følge resultatene live etter hvert som løperne passerer mål — på samme side som påmeldingen.",
+      "Tidtakingen utføres profesjonelt av EQ Timing. På løpsdagen kan både løpere og publikum følge resultatene live etter hvert som løperne passerer mål. Komplette resultater fra 2026 ligger ute nå.",
     links: [
-      { label: "Følg resultatene live (EQ Timing)", url: "https://live.eqtiming.com/80315", live: true },
+      { label: "Se resultatene fra 2026 (EQ Timing)", url: "https://live.eqtiming.com/80315#result" },
     ],
   },
 ];
@@ -117,9 +117,13 @@ export default function PracticalInfo() {
 
         {/* Timeline / schedule */}
         <div className="mb-12">
-          <h3 className="mb-6 text-center text-lg font-bold text-ocean-dark">
-            Dagens program — Lørdag 13. juni 2026
+          <h3 className="mb-2 text-center text-lg font-bold text-ocean-dark">
+            Slik ser en løpsdag ut
           </h3>
+          <p className="mb-6 text-center text-sm text-gray-500">
+            Programmet under er fra 2026 — endelig program for 2027 kommer i
+            september.
+          </p>
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-[3.25rem] top-0 bottom-0 hidden w-0.5 bg-ocean/20 sm:block" />

@@ -10,18 +10,18 @@ export default function Footer() {
             className="mb-3 text-2xl font-extrabold sm:text-3xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Klar for å løpe?
+            Vi sees igjen i juni 2027!
           </h2>
           <p className="mb-6 text-white/70">
-            Lørdag 13. juni 2026 — Skudeneshavn
+            Dato annonseres og påmeldingen åpner i september
           </p>
           <a
-            href="https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet"
+            href="https://www.facebook.com/share/17xXiKoLHn/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark"
           >
-            Meld deg på nå!
+            Følg oss på Facebook
           </a>
         </div>
 

@@ -5,44 +5,44 @@ import Image from "next/image";
 
 const images = [
   {
-    src: "/images/galleri/havnen.jpg",
-    alt: "Løpere passerer Bade-Olena på bryggen i Skudeneshavn",
+    src: "/images/galleri/2026-05.jpg",
+    alt: "Startfeltet på 5 km samlet ved Torget — folkefest i Skudeneshavn 2026",
     span: "col-span-2 row-span-2",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "/images/galleri/2025-07.jpg",
-    alt: "Vinner krysser mållinjen med konfetti",
+    src: "/images/galleri/2026-02.jpg",
+    alt: "Robin Nilsen Espejo løper inn til seier på 10 km ved CRAFT-portalen",
     span: "",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/galleri/2025-03.jpg",
-    alt: "Medaljer klare til utdeling ved Bade-Olena",
+    src: "/images/galleri/2026-03.jpg",
+    alt: "To unge deltakere spurter mot mål forbi bronsestatuene",
     span: "",
     aspect: "aspect-square",
   },
   {
-    src: "/images/galleri/2025-08.jpg",
-    alt: "Barn og voksne klare ved startlinjen — Havnasprinten",
+    src: "/images/galleri/2026-04.jpg",
+    alt: "Blid løper vinker til fotografen underveis i løypa",
     span: "",
     aspect: "aspect-square",
   },
   {
-    src: "/images/galleri/2025-10.jpg",
-    alt: "Løpere i full fart gjennom gatene i Gamle Skudeneshavn",
+    src: "/images/galleri/2026-07.jpg",
+    alt: "Store og små løper sammen gjennom gatene — folkefest for alle aldre",
     span: "col-span-2",
     aspect: "aspect-[2/1]",
   },
   {
-    src: "/images/galleri/2025-09.jpg",
-    alt: "Liten deltaker får medalje — folkefest for alle aldre",
+    src: "/images/galleri/2026-01.jpg",
+    alt: "Løpere i full fart mellom de hvitmalte trehusene i Gamle Skudeneshavn",
     span: "",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/galleri/premiering.jpg",
-    alt: "Premieutdeling på Bade-Olena etter løpet",
+    src: "/images/galleri/2026-06.jpg",
+    alt: "Jubel og medaljer på premiepallen ved havnen",
     span: "",
     aspect: "aspect-square",
   },
@@ -61,7 +61,8 @@ export default function Gallery() {
           Stemningsbilder
         </h2>
         <p className="mx-auto mb-10 max-w-xl text-center text-gray-600">
-          Glimt fra Skudeneshavnløpet 2025 — folkefest mellom hvitmalte trehus
+          Glimt fra Skudeneshavnløpet 2026 — folkefest mellom hvitmalte trehus.
+          Flere bilder finner du på Facebook-siden vår.
         </p>
 
         {/* Masonry-inspired grid */}

@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-const REGISTRATION_URL = "https://signup.eqtiming.com/arrangement/skudeneshavnlopet-2026/g295.55447?event=skudeneshavnlopet";
-
 const distances = [
   {
     name: "Havnasprinten",
@@ -40,11 +38,15 @@ export default function Distances() {
     <section id="distanser" className="bg-sand py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <h2
-          className="mb-12 text-center text-3xl font-extrabold text-ocean-dark sm:text-4xl"
+          className="mb-4 text-center text-3xl font-extrabold text-ocean-dark sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Distanser
         </h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
+          Starttider og priser under er fra 2026 — endelig program for 2027
+          kommer sammen med påmeldingen i september.
+        </p>
 
         <div className="grid gap-6 sm:grid-cols-3">
           {distances.map((d) => (
@@ -85,14 +87,9 @@ export default function Distances() {
                 </div>
 
                 {d.cta && (
-                  <a
-                    href={REGISTRATION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 block rounded-full bg-coral px-6 py-3 text-center text-sm font-bold text-white transition-all hover:bg-coral-dark hover:shadow-lg"
-                  >
-                    Meld deg på
-                  </a>
+                  <p className="mt-5 block rounded-full bg-sand px-6 py-3 text-center text-sm font-bold text-ocean">
+                    Påmelding åpner i september
+                  </p>
                 )}
               </div>
             </div>
@@ -149,6 +146,7 @@ export default function Distances() {
                 Den gjeveste premien i løpet. Still bedriftslaget, vennegjengen
                 eller familien — de 3 beste tidene teller, og vinnerlaget får
                 navnet sitt gravert på pokalen og tar den med hjem til neste år.
+                Solstad Running Team tok pokalen i 2026 — hvem tar den i 2027?
               </p>
 
               <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
@@ -164,14 +162,9 @@ export default function Distances() {
                 )}
               </div>
 
-              <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-7 inline-block rounded-full bg-coral px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:bg-coral-dark hover:shadow-xl active:scale-95"
-              >
-                Meld på laget!
-              </a>
+              <p className="mt-7 inline-block rounded-full border border-amber-200/30 bg-white/10 px-8 py-3.5 text-base font-bold text-amber-100 backdrop-blur-sm">
+                Lagpåmeldingen åpner i september
+              </p>
             </div>
           </div>
         </div>

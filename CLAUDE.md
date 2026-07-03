@@ -1,8 +1,21 @@
 # Skudeneshavnløpet — Prosjektdokumentasjon
 
 ## Om prosjektet
-Landingsside for Skudeneshavnløpet 2026 — et årlig gateløp i Skudeneshavn, Karmøy.
-Arrangeres lørdag 13. juni 2026, fjerde gang.
+Landingsside for Skudeneshavnløpet — et årlig gateløp i Skudeneshavn, Karmøy.
+
+## Status (juli 2026): 2027-modus
+2026-løpet (13. juni) er gjennomført: 262 påmeldte (+32 % fra 2025).
+Siden er rigget om til å annonsere 2027-løpet (juni 2027, femte gang):
+- Dato annonseres og påmeldingen åpner i **september 2026**
+- Alle påmeldings-CTA-er er byttet ut med «Påmelding åpner i september»
+- Ny komponent `Winners2026.tsx` viser topp 3 per distanse/kjønn + Solstad
+  Running Team som vinner av lagkonkurransen
+- Galleri viser bilder fra 2026 (`public/images/galleri/2026-*.jpg`) — kun et
+  lite utvalg; hovedvolumet av fotografbilder legges på Facebook
+- `Kampanje.tsx` (HAVN-kupong 2026) og `RaceDayBanner.tsx` er tatt ut av
+  page.tsx, men filene er beholdt til 2027
+- Når dato/påmelding er klar: oppdater Hero, Countdown (TARGET), RaceDayBanner
+  (RACE_DATE), layout.tsx (JSON-LD startDate), FAQ og CTA-lenker
 
 ## Tech stack
 - **Framework:** Next.js (App Router) med TypeScript

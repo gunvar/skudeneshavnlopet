@@ -4,20 +4,24 @@ import { useState } from "react";
 
 const faqs: { q: string; a: string }[] = [
   {
-    q: "Når og hvor går Skudeneshavnløpet 2026?",
-    a: "Skudeneshavnløpet arrangeres lørdag 13. juni 2026 i Gamle Skudeneshavn på Karmøy. Start og målgang er ved Torget, Kirkevegen 4, 4280 Skudeneshavn. Første start (Havnasprinten) er kl. 11:00.",
+    q: "Når går Skudeneshavnløpet 2027?",
+    a: "Skudeneshavnløpet 2027 arrangeres i juni 2027 i Gamle Skudeneshavn på Karmøy. Nøyaktig dato annonseres i september. Start og målgang er ved Torget, Kirkevegen 4, 4280 Skudeneshavn.",
+  },
+  {
+    q: "Når åpner påmeldingen?",
+    a: "Påmeldingen åpner i september, samtidig som datoen annonseres. Følg oss på Facebook eller sjekk denne siden for å få med deg åpningen.",
   },
   {
     q: "Hvilke distanser kan jeg velge mellom?",
-    a: "Du kan velge mellom tre distanser: Havnasprinten på 500 m (kl. 11:00, gratis og for barn), 10 km (kl. 12:00) og 5 km (kl. 12:15). Alle løypene starter og slutter ved Torget.",
+    a: "Du kan velge mellom tre distanser: Havnasprinten på 500 m (gratis og for barn), 5 km og 10 km. Alle løypene starter og slutter ved Torget.",
   },
   {
     q: "Hva koster påmeldingen?",
-    a: "Havnasprinten for barn er gratis. 5 km og 10 km koster 350 kr. Meld deg på via EQ Timing på live.eqtiming.com/80315.",
+    a: "Prisene for 2027 fastsettes når påmeldingen åpner i september. I 2026 kostet 5 km og 10 km 350 kr, og Havnasprinten for barn var gratis.",
   },
   {
     q: "Hvordan fungerer lagkonkurransen?",
-    a: "Lagkonkurransen går på 5 km med vandrepokal for beste lag — en tradisjon vi har hatt siden 2024. Hvert lag må ha minimum 3 deltakere (ingen øvre grense), og de 3 beste tidene på laget teller i sammenlagt. Det er ingen egen lagpåmelding — alle melder seg på individuelt, men deltakere som skal være på samme lag må oppgi samme lagnavn ved registrering. Perfekt for bedrifter, vennegjenger eller familier.",
+    a: "Lagkonkurransen går på 5 km med vandrepokal for beste lag — en tradisjon vi har hatt siden 2024. Hvert lag må ha minimum 3 deltakere (ingen øvre grense), og de 3 beste tidene på laget teller i sammenlagt. Det er ingen egen lagpåmelding — alle melder seg på individuelt, men deltakere som skal være på samme lag må oppgi samme lagnavn ved registrering. Perfekt for bedrifter, vennegjenger eller familier. I 2026 vant Solstad Running Team vandrepokalen.",
   },
   {
     q: "Får alle medalje?",
@@ -25,11 +29,11 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Er det offisiell tidtaking?",
-    a: "Ja, tidtakingen utføres profesjonelt av EQ Timing. Alle deltakere på 5 km og 10 km får chip-tid. På løpsdagen kan du følge resultatene live på live.eqtiming.com/80315 — samme side som påmeldingen — og endelige resultater publiseres der umiddelbart etter løpet.",
+    a: "Ja, tidtakingen utføres profesjonelt av EQ Timing. Alle deltakere på 5 km og 10 km får chip-tid. På løpsdagen kan du følge resultatene live, og endelige resultater publiseres umiddelbart etter løpet. Resultatene fra 2026 finner du på live.eqtiming.com/80315.",
   },
   {
     q: "Når henter jeg startnummer?",
-    a: "Startnummer hentes i teltet på Torget fra kl. 10:00–11:30 samme dag. Meld deg på senest 1. juni 2026 hvis du vil ha navnet ditt trykket på startnummeret.",
+    a: "Startnummer hentes i teltet på Torget på løpsdagen. Nøyaktige tider og frister for 2027 kommer sammen med påmeldingen i september.",
   },
   {
     q: "Kan barn delta?",
@@ -75,7 +79,7 @@ export default function FAQ() {
           Ofte stilte spørsmål
         </h2>
         <p className="mx-auto mb-10 max-w-xl text-center text-gray-600">
-          Alt du trenger å vite om Skudeneshavnløpet 2026
+          Alt du trenger å vite om Skudeneshavnløpet 2027
         </p>
 
         <div className="space-y-3">
