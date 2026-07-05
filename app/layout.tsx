@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Skudeneshavnløpet 2026 — løpere gjennom sommerbyen",
+        alt: "Skudeneshavnløpet 2027 — juni 2027, dato og påmelding slippes i september",
       },
     ],
   },
