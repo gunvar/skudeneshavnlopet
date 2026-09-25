@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const NAV_LINKS = [
+  { href: "#mot-2027", label: "2027" },
   { href: "#om", label: "Om løpet" },
   { href: "#distanser", label: "Distanser" },
   { href: "#loypekart", label: "Løypekart" },
   { href: "#praktisk", label: "Praktisk" },
   { href: "#faq", label: "FAQ" },
   { href: "#galleri", label: "Galleri" },
-  { href: "#sponsorer", label: "Sponsorer" },
+  { href: "#sponsorer", label: "Bli sponsor" },
   { href: "#resultater", label: "Resultater" },
 ];
 
@@ -83,7 +84,7 @@ export default function Navbar() {
             </a>
           ))}
           <span className="whitespace-nowrap rounded-full bg-ocean px-5 py-2.5 text-sm font-bold text-white shadow-lg">
-            Påmelding åpner i september
+            Påmelding åpner i oktober
           </span>
         </div>
 
@@ -122,7 +123,7 @@ export default function Navbar() {
               </a>
             ))}
             <span className="mt-2 rounded-full bg-ocean px-6 py-3 text-base font-bold text-white shadow-lg">
-              Påmelding åpner i september
+              Påmelding åpner i oktober
             </span>
           </div>
         </div>

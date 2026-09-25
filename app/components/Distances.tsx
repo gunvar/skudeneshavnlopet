@@ -45,7 +45,7 @@ export default function Distances() {
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
           Starttider og priser under er fra 2026 — endelig program for 2027
-          kommer sammen med påmeldingen i september.
+          kommer sammen med påmeldingen i løpet av oktober.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-3">
@@ -88,7 +88,7 @@ export default function Distances() {
 
                 {d.cta && (
                   <p className="mt-5 block rounded-full bg-sand px-6 py-3 text-center text-sm font-bold text-ocean">
-                    Påmelding åpner i september
+                    Påmelding åpner i oktober
                   </p>
                 )}
               </div>
@@ -163,7 +163,7 @@ export default function Distances() {
               </div>
 
               <p className="mt-7 inline-block rounded-full border border-amber-200/30 bg-white/10 px-8 py-3.5 text-base font-bold text-amber-100 backdrop-blur-sm">
-                Lagpåmeldingen åpner i september
+                Lagpåmeldingen åpner i oktober
               </p>
             </div>
           </div>

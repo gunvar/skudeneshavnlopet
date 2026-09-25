@@ -16,6 +16,7 @@ import Prizes from "./components/Prizes";
 import Sommerbyen from "./components/Sommerbyen";
 import ImageBreak from "./components/ImageBreak";
 import Winners2026 from "./components/Winners2026";
+import Road2027 from "./components/Road2027";
 
 export default function Home() {
   return (
@@ -24,6 +25,10 @@ export default function Home() {
       <MobileCTA />
       <main>
         <Hero />
+
+        <Road2027 />
+
+        <WaveDivider from="fill-ocean-dark" to="fill-white" />
 
         <FadeIn>
           <About />

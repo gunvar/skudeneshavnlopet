@@ -24,7 +24,7 @@ export default function MobileCTA() {
               Neste løp: juni 2027
             </p>
             <p className="text-[10px] text-coral font-medium">
-              Dato og påmelding annonseres i september
+              Dato og påmelding annonseres i løpet av oktober
             </p>
           </div>
           <a

@@ -5,11 +5,11 @@ import { useState } from "react";
 const faqs: { q: string; a: string }[] = [
   {
     q: "Når går Skudeneshavnløpet 2027?",
-    a: "Skudeneshavnløpet 2027 arrangeres i juni 2027 i Gamle Skudeneshavn på Karmøy. Nøyaktig dato annonseres i september. Start og målgang er ved Torget, Kirkevegen 4, 4280 Skudeneshavn.",
+    a: "Skudeneshavnløpet 2027 arrangeres i juni 2027 i Gamle Skudeneshavn på Karmøy. Nøyaktig dato annonseres i løpet av oktober. Start og målgang er ved Torget, Kirkevegen 4, 4280 Skudeneshavn.",
   },
   {
     q: "Når åpner påmeldingen?",
-    a: "Påmeldingen åpner i september, samtidig som datoen annonseres. Følg oss på Facebook eller sjekk denne siden for å få med deg åpningen.",
+    a: "Påmeldingen åpner i løpet av oktober, samtidig som datoen annonseres. Følg oss på Facebook eller sjekk denne siden for å få med deg åpningen.",
   },
   {
     q: "Hvilke distanser kan jeg velge mellom?",
@@ -17,7 +17,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Hva koster påmeldingen?",
-    a: "Prisene for 2027 fastsettes når påmeldingen åpner i september. I 2026 kostet 5 km og 10 km 350 kr, og Havnasprinten for barn var gratis.",
+    a: "Prisene for 2027 fastsettes når påmeldingen åpner i løpet av oktober. I 2026 kostet 5 km og 10 km 350 kr, og Havnasprinten for barn var gratis.",
   },
   {
     q: "Hvordan fungerer lagkonkurransen?",
@@ -33,7 +33,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Når henter jeg startnummer?",
-    a: "Startnummer hentes i teltet på Torget på løpsdagen. Nøyaktige tider og frister for 2027 kommer sammen med påmeldingen i september.",
+    a: "Startnummer hentes i teltet på Torget på løpsdagen. Nøyaktige tider og frister for 2027 kommer sammen med påmeldingen i løpet av oktober.",
   },
   {
     q: "Kan barn delta?",

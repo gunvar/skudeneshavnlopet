@@ -3,11 +3,18 @@
 ## Om prosjektet
 Landingsside for Skudeneshavnløpet — et årlig gateløp i Skudeneshavn, Karmøy.
 
-## Status (juli 2026): 2027-modus
+## Status (september 2026): 2027-modus
 2026-løpet (13. juni) er gjennomført: 262 påmeldte (+32 % fra 2025).
 Siden er rigget om til å annonsere 2027-løpet (juni 2027, femte gang):
-- Dato annonseres og påmeldingen åpner i **september 2026**
-- Alle påmeldings-CTA-er er byttet ut med «Påmelding åpner i september»
+- Dato annonseres og påmeldingen åpner **i løpet av oktober 2026** (utsatt fra september)
+- Alle påmeldings-CTA-er er byttet ut med «Påmelding åpner i (løpet av) oktober»
+- `Road2027.tsx` («Veien mot 2027», id `mot-2027`) rett under Hero:
+  tidslinje mot løpsdagen, utfordringer og Facebook/del-CTA.
+  Oppdater tidslinjen (steget «Oktober 2026» → ferdig) når påmeldingen åpner
+- `Sponsors.tsx` er gjort om til «Bli sponsor 2027» — 2026-logoene er tatt bort
+  til nye avtaler er på plass (logofilene ligger fortsatt i `public/images/sponsorer/`)
+- OG-bildet genereres fra `../og-image-2027.html` (headless Chrome med
+  `--allow-file-access-from-files`, 1200×630) → `public/og-image.jpg`
 - Ny komponent `Winners2026.tsx` viser topp 3 per distanse/kjønn + Solstad
   Running Team som vinner av lagkonkurransen
 - Galleri viser bilder fra 2026 (`public/images/galleri/2026-*.jpg`) — kun et
@@ -71,7 +78,7 @@ public/images/
 └── sponsorer/          — Sponsorlogoer
 ```
 
-## Sponsorer 2026 (foreløpig, samme som 2025)
+## Sponsorer 2026 (ikke vist på siden nå — 2027-sponsorer selges inn)
 - Skudenes & Aakra Sparebank
 - Brødr. Olsen
 - Solstad Offshore

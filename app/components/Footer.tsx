@@ -13,7 +13,7 @@ export default function Footer() {
             Vi sees igjen i juni 2027!
           </h2>
           <p className="mb-6 text-white/70">
-            Dato annonseres og påmeldingen åpner i september
+            Dato annonseres og påmeldingen åpner i løpet av oktober
           </p>
           <a
             href="https://www.facebook.com/share/17xXiKoLHn/"

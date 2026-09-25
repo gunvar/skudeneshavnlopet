@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     "Skudeneshavnløpet 2027 — Gateløp på Karmøy i juni | Opplev sommerbyen i løpesko",
   description:
-    "Skudeneshavnløpet 2027 arrangeres i juni — dato annonseres og påmeldingen åpner i september. Gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes): 500 m, 5 km og 10 km. Se resultater og bilder fra 2026.",
+    "Skudeneshavnløpet 2027 arrangeres i juni — dato annonseres og påmeldingen åpner i løpet av oktober. Gateløp på Karmøy gjennom Gamle Skudeneshavn (Skudnes): 500 m, 5 km og 10 km. Se resultater og bilder fra 2026.",
   alternates: {
     canonical: "/",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Skudeneshavnløpet 2027 — Opplev sommerbyen i løpesko",
     description:
-      "Skudeneshavnløpet 2027 går i juni — dato og påmelding annonseres i september. 500 m, 5 km og 10 km gjennom vakre Skudeneshavn.",
+      "Skudeneshavnløpet 2027 går i juni — dato og påmelding annonseres i løpet av oktober. 500 m, 5 km og 10 km gjennom vakre Skudeneshavn.",
     type: "website",
     locale: "nb_NO",
     siteName: "Skudeneshavnløpet",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Skudeneshavnløpet 2027 — juni 2027, dato og påmelding slippes i september",
+        alt: "Skudeneshavnløpet 2027 — juni 2027, dato og påmelding slippes i oktober",
       },
     ],
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Skudeneshavnløpet 2027 — juni 2027",
     description:
-      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. Dato annonseres og påmeldingen åpner i september.",
+      "500 m, 5 km og 10 km gjennom Gamle Skudeneshavn. Dato annonseres og påmeldingen åpner i løpet av oktober.",
     images: ["/og-image.jpg"],
   },
   icons: {
@@ -78,11 +78,11 @@ const sportsEventJsonLd = {
   "@type": "SportsEvent",
   name: "Skudeneshavnløpet 2027",
   url: SITE_URL,
-  // Nøyaktig dato annonseres i september — måned-presisjon inntil videre
+  // Nøyaktig dato annonseres i løpet av oktober — måned-presisjon inntil videre
   startDate: "2027-06",
   image: [`${SITE_URL}/og-image.jpg`],
   description:
-    "Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på Karmøy. Distanser 500 m (Havnasprinten for barn), 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Profesjonell tidtaking ved EQ Timing. Dato for 2027 annonseres i september, samtidig som påmeldingen åpner.",
+    "Skudeneshavnløpet er et årlig gateløp gjennom Gamle Skudeneshavn på Karmøy. Distanser 500 m (Havnasprinten for barn), 5 km og 10 km. Lagkonkurranse med vandrepokal på 5 km. Profesjonell tidtaking ved EQ Timing. Dato for 2027 annonseres i løpet av oktober, samtidig som påmeldingen åpner.",
   location: {
     "@type": "Place",
     name: "Torget, Skudeneshavn",

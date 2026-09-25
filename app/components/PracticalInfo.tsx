@@ -21,7 +21,7 @@ const infoSections: {
   {
     title: "Startnummer og registrering",
     content:
-      "Startnummer hentes i teltet på Torget på løpsdagen. Frister og detaljer for 2027 kommer sammen med påmeldingen i september. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
+      "Startnummer hentes i teltet på Torget på løpsdagen. Frister og detaljer for 2027 kommer sammen med påmeldingen i løpet av oktober. Tidtaking ved EQ Timing — alle deltakere på 5 km og 10 km får chip-tid.",
   },
   {
     title: "Parkering (gratis)",
@@ -122,7 +122,7 @@ export default function PracticalInfo() {
           </h3>
           <p className="mb-6 text-center text-sm text-gray-500">
             Programmet under er fra 2026 — endelig program for 2027 kommer i
-            september.
+            løpet av oktober.
           </p>
           <div className="relative">
             {/* Vertical line */}

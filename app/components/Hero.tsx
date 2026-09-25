@@ -57,29 +57,39 @@ export default function Hero() {
         </p>
 
         {/* Annonsering */}
-        <div className="mb-10 flex items-center gap-3 rounded-2xl bg-white/15 px-6 py-4 backdrop-blur-sm ring-1 ring-white/20">
-          <span className="text-2xl" aria-hidden="true">
-            📅
+        <a
+          href="#mot-2027"
+          className="group mb-10 flex items-center gap-3 rounded-2xl bg-white/15 px-6 py-4 backdrop-blur-sm ring-1 ring-coral/60 transition hover:bg-white/20"
+        >
+          <span className="relative flex h-3 w-3 shrink-0" aria-hidden="true">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-coral" />
           </span>
-          <p className="text-left text-sm font-semibold text-white sm:text-base">
-            Dato annonseres og påmeldingen åpner i september
-          </p>
-        </div>
+          <span className="text-left">
+            <span className="block text-sm font-bold text-white sm:text-base">
+              Påmeldingen åpner i løpet av oktober
+            </span>
+            <span className="block text-xs text-white/70 sm:text-sm">
+              Dato slippes samtidig · Se veien mot 2027{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </span>
+        </a>
 
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <a
-            href="#resultater-2026"
-            className="group relative rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark sm:px-10 sm:text-xl"
-          >
-            Se resultatene fra 2026
-          </a>
           <a
             href={FACEBOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="group relative rounded-full bg-coral px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-coral-dark sm:px-10 sm:text-xl"
+          >
+            Få beskjed når påmeldingen åpner
+          </a>
+          <a
+            href="#resultater-2026"
             className="rounded-full bg-white/15 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm ring-1 ring-white/30 transition-all hover:bg-white/25"
           >
-            Følg oss på Facebook
+            Se resultatene fra 2026
           </a>
         </div>
 
